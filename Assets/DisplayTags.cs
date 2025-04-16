@@ -11,6 +11,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Random = UnityEngine.Random;
 using UnityEngine.InputSystem;
+using UnityEngine.XR;
 
 public class DisplayTags : MonoBehaviour
 {
@@ -55,6 +56,13 @@ public class DisplayTags : MonoBehaviour
     float screenWidth;
     float screenInitialWidth;
     float scaleAdaptator;
+    private UnityEngine.XR.InputDevice leftControllerDevice;
+    private UnityEngine.XR.InputDevice rightControllerDevice;
+
+    private XRNode leftControllerNode = XRNode.LeftHand;   // Contrôleur gauche
+    private XRNode rightControllerNode = XRNode.RightHand; // Contrôleur droit
+
+    private UnityEngine.XR.InputDevice currentControllerDevice;
 
     /// <summary>
     /// This method is called at the start of the object's lifecycle, during initialization.
@@ -80,6 +88,8 @@ public class DisplayTags : MonoBehaviour
         {
             Debug.LogError("The 'Screen' object was not found!");
         }
+        leftControllerDevice = InputDevices.GetDeviceAtXRNode(leftControllerNode);
+        rightControllerDevice = InputDevices.GetDeviceAtXRNode(rightControllerNode);
     }
 
     /// <summary>
@@ -94,14 +104,52 @@ public class DisplayTags : MonoBehaviour
     /// </remarks>
     /// <exception cref="ArgumentNullException">Thrown when a required component or object is not found (e.g., "InputField" or "Node").</exception>
     void Update()
-    {
+    {  
+        bool leftButtonAPressed = false;
+        bool rightButtonAPressed = false;
         // Resizing the screen based on arrow key inputs
         screenScale = screenObject.transform.localScale;
+
+        // Vérifie si le bouton A est pressé sur le contrôleur gauche
+        if (leftControllerDevice.isValid)
+        {
+            leftControllerDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primaryButton, out leftButtonAPressed);
+        }
+
+        // Vérifie si le bouton A est pressé sur le contrôleur droit
+        if (rightControllerDevice.isValid)
+        {
+            rightControllerDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primaryButton, out rightButtonAPressed);
+        }
+
+        // Déterminer quel contrôleur est utilisé (gauche ou droit)
+        if (leftButtonAPressed)
+        {
+            currentControllerDevice = leftControllerDevice;
+        }
+        else if (rightButtonAPressed)
+        {
+            currentControllerDevice = rightControllerDevice;
+        }
 
         // DRAG & DROP + NODE DISPLAY OPTIONS
         if (InputManager.Instance != null && (Input.GetMouseButtonDown(0) || InputManager.Instance.LeftButtonAPressed || InputManager.Instance.RightButtonAPressed)) // Check if the mouse is clicked
         {
-            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+            Vector3 controllerPosition;
+            Ray ray;
+            if(Input.GetMouseButtonDown(0))
+            {
+                ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+            }else{
+                Quaternion controllerRotation;
+                currentControllerDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.devicePosition, out controllerPosition);
+                currentControllerDevice.TryGetFeatureValue(UnityEngine.XR.CommonUsages.deviceRotation, out controllerRotation);
+
+                Vector3 controllerForward = controllerRotation * Vector3.forward;
+
+                ray = new Ray(controllerPosition, controllerForward);
+            }
+
             if (Physics.Raycast(ray, out hit)) 
             {
                 touchedNode = hit.collider.gameObject;
@@ -250,7 +298,7 @@ public class DisplayTags : MonoBehaviour
         }
 
         // Stop dragging when mouse button is released
-        if (Input.GetMouseButtonUp(0)) // Stop dragging
+        if (Input.GetMouseButtonUp(0) || !InputManager.Instance.LeftButtonAPressed || !InputManager.Instance.RightButtonAPressed) // Stop dragging
         {
             StopDragging();
         }
