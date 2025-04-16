@@ -1,0 +1,9 @@
+<map id="DisplayTags::UpdateParentAPI" name="DisplayTags::UpdateParentAPI">
+<area shape="rect" id="Node000001" title="Sends a PUT request to update the parent of a moved node in the API. This function extracts the ID of..." alt="" coords="662,13,866,40"/>
+<area shape="rect" id="Node000002" href="$class_display_tags.html#a2cf8dd5b3705569e0cec84477fa13c63" title="Checks for collisions between the dragged node and other nodes in the scene. This function uses the P..." alt="" coords="425,5,614,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="647,29,615,29,615,24,647,24"/>
+<area shape="rect" id="Node000003" href="$class_display_tags.html#a8a531271715a281b9128daa0c6b96bf6" title="Stops the dragging operation of an object. This function is called when the user releases the object ..." alt="" coords="197,13,377,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="410,29,378,29,378,24,410,24"/>
+<area shape="rect" id="Node000004" href="$class_display_tags.html#af28cd2806e067aac0160202087ec4906" title="This method is called once per frame to update the game logic. It handles screen resizing via arrow k..." alt="" coords="5,13,149,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="181,29,149,29,149,24,181,24"/>
+</map>

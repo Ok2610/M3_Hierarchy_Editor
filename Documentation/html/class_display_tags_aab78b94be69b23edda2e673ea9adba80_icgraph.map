@@ -1,0 +1,10 @@
+<map id="DisplayTags::SetTransparency" name="DisplayTags::SetTransparency">
+<area shape="rect" id="Node000001" title="Sets the transparency (alpha value) of the given object and all of its children that have a Renderer ..." alt="" coords="445,31,645,57"/>
+<area shape="rect" id="Node000002" href="$class_display_tags.html#a8a531271715a281b9128daa0c6b96bf6" title="Stops the dragging operation of an object. This function is called when the user releases the object ..." alt="" coords="207,5,387,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="429,35,387,31,388,25,430,30"/>
+<area shape="rect" id="Node000004" href="$class_display_tags.html#a87e756b5dc049093bd2db04e54ec9000" title="This method attempts to start dragging an object. It checks whether the touched object is a node or a..." alt="" coords="197,56,397,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="430,58,398,62,397,56,429,53"/>
+<area shape="rect" id="Node000003" href="$class_display_tags.html#af28cd2806e067aac0160202087ec4906" title="This method is called once per frame to update the game logic. It handles screen resizing via arrow k..." alt="" coords="5,31,149,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="192,33,150,38,149,33,191,28"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="181,59,148,55,149,50,182,53"/>
+</map>

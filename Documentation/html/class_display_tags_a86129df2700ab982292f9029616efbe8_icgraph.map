@@ -1,0 +1,11 @@
+<map id="DisplayTags::CallShowHierarchyAPI" name="DisplayTags::CallShowHierarchyAPI">
+<area shape="rect" id="Node000001" title="Sends a request to the API to fetch a hierarchy of nodes based on the specified hierarchy ID...." alt="" coords="445,72,680,99"/>
+<area shape="rect" id="Node000002" href="$class_display_tags.html#a629c9bb1162b7783f782a170da64b564" title="Adds a new node to the database by sending an HTTP POST request to the API. The function serializes t..." alt="" coords="204,5,390,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="483,71,389,50,390,44,484,65"/>
+<area shape="rect" id="Node000003" href="$class_display_tags.html#af28cd2806e067aac0160202087ec4906" title="This method is called once per frame to update the game logic. It handles screen resizing via arrow k..." alt="" coords="5,72,149,99"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="430,88,149,88,149,83,430,83"/>
+<area shape="rect" id="Node000004" href="$class_display_tags.html#acd5bf7c591dc5abebbb435807b3c893f" title="Deletes a node from the database by sending an HTTP DELETE request to the API. The function locates t..." alt="" coords="197,123,397,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="484,105,397,125,396,120,483,100"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="201,55,130,74,129,69,199,50"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="199,121,129,102,130,97,201,116"/>
+</map>

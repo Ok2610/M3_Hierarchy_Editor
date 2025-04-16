@@ -1,0 +1,5 @@
+<map id="InputManager::Update" name="InputManager::Update">
+<area shape="rect" id="Node000001" title="Called every frame. Checks the button states and re&#45;initializes devices if necessary." alt="" coords="5,13,156,40"/>
+<area shape="rect" id="Node000002" href="$class_input_manager.html#a1073c97a001c83bbddd9961fc4a12b78" title="Initializes the input devices for the left and right hands." alt="" coords="204,5,360,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,24,188,24,188,29,156,29"/>
+</map>

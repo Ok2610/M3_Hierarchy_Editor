@@ -1,0 +1,36 @@
+\chapter{Potential Enhancements}
+\hypertarget{md__potential___enhancements}{}\label{md__potential___enhancements}\index{Potential Enhancements@{Potential Enhancements}}
+\label{md__potential___enhancements_autotoc_md8}%
+\Hypertarget{md__potential___enhancements_autotoc_md8}%
+
+
+Here is a ranking of additions/changes that might be interesting to include.\hypertarget{md__potential___enhancements_autotoc_md9}{}\doxysection{\texorpdfstring{Must have}{Must have}}\label{md__potential___enhancements_autotoc_md9}
+
+\begin{DoxyItemize}
+\item Display the hierarchy on a panel and allow moving the panel ~\newline
+ {\itshape (The goal is to modify the tags in the hierarchy while having the Vi\+RMA display). → Work in progress} ~\newline
+
+\item Zoom {\itshape (Use the joysticks\+: one to move the hierarchy, the other to zoom in/out).} ~\newline
+
+\item Delete Branch {\itshape (Delete a node and all its child nodes below).} ~\newline
+
+\item When deleting, allow reattaching the children to the grandparent {\itshape (P+2 parent).} ~\newline
+
+\item Search for a node by its name within a hierarchy. ~\newline
+
+\item Implement security in the API to prevent creating loops in hierarchies ~\newline
+ {\itshape (e.\+g., root → child1 → child1\+\_\+1 → root → …).} ~\newline
+  ~\newline
+
+\end{DoxyItemize}\hypertarget{md__potential___enhancements_autotoc_md10}{}\doxysection{\texorpdfstring{Could be interesting}{Could be interesting}}\label{md__potential___enhancements_autotoc_md10}
+
+\begin{DoxyItemize}
+\item Inter-\/hierarchy movement {\itshape (Drag and drop a node from a hierarchy into another one).}
+\item Optimize display refresh during modifications {\itshape (Refresh only the visual of the node modified instead of every nodes).}
+\item Rollback function {\itshape (Async between Unity and the DB with a commit button).}
+\item Shorten wide nodes {\itshape (In case we choose to work on wide hierarchies).}
+\end{DoxyItemize}\hypertarget{md__potential___enhancements_autotoc_md11}{}\doxysection{\texorpdfstring{Additional ideas}{Additional ideas}}\label{md__potential___enhancements_autotoc_md11}
+
+\begin{DoxyItemize}
+\item Add parent {\itshape (Evolution of “\+Add node”\+: If the name given in “\+Add node” already exists, then the node with that name becomes the parent of the current node. If the name is unknown, a child node is created for the current node).} 
+\end{DoxyItemize}

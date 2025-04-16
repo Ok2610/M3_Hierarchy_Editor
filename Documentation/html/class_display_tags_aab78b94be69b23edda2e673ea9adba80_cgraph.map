@@ -1,0 +1,5 @@
+<map id="DisplayTags::SetTransparency" name="DisplayTags::SetTransparency">
+<area shape="rect" id="Node000001" title="Sets the transparency (alpha value) of the given object and all of its children that have a Renderer ..." alt="" coords="5,5,206,32"/>
+<area shape="rect" id="Node000002" href="$class_display_tags.html#a3cc6347a3a21f05e630e3c16378f6b2e" title="Applies transparency (alpha value) to a Renderer component. This method modifies the color of the mat..." alt="" coords="254,5,467,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,16,238,16,238,21,206,21"/>
+</map>

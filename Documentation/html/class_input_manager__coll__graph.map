@@ -1,0 +1,6 @@
+<map id="InputManager" name="InputManager">
+<area shape="rect" id="Node000001" title="Class responsible for managing user input for VR devices, such as buttons on the left and right hands..." alt="" coords="11,81,111,108"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="128,87,138,95,129,102,112,104,111,99,127,97,133,95,125,91"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,117,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,47,64,81,58,81,58,47"/>
+</map>

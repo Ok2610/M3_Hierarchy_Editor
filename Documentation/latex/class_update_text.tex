@@ -1,0 +1,78 @@
+\doxysection{Update\+Text Class Reference}
+\hypertarget{class_update_text}{}\label{class_update_text}\index{UpdateText@{UpdateText}}
+
+
+Inheritance diagram for Update\+Text\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_update_text__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Update\+Text\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_update_text__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_update_text_a9235d59b1a74ac43032aa00a496ff6ab}{Update\+Text\+Content}} (string new\+Text)
+\begin{DoxyCompactList}\small\item\em Updates the text displayed by the Text\+Mesh\+Pro\+UGUI component. This method assigns the provided \texorpdfstring{$<$}{<}paramref name="{}"{}new\+Text"{}"{}/\texorpdfstring{$>$}{>} value to the text\+Component\textquotesingle{}s text. If the Text\+Mesh\+Pro\+UGUI component is not found, an error message is logged. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_update_text_a4998b3e03591ba469077560c1310d71c}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Called when the script is first initialized. This method checks all child objects of the current Game\+Object to find one with the name "{}text"{} and attempts to assign the Text\+Mesh\+Pro\+UGUI component from it to {\ttfamily text\+Component}. If no matching child is found, an error is logged. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_update_text_aa9483b6a3ec43c387abfbabb417a643f}{text\+Component}}
+\begin{DoxyCompactList}\small\item\em The Text\+Mesh\+Pro\+UGUI component used to display the text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_update_text_a4998b3e03591ba469077560c1310d71c}\index{UpdateText@{UpdateText}!Start@{Start}}
+\index{Start@{Start}!UpdateText@{UpdateText}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_update_text_a4998b3e03591ba469077560c1310d71c} 
+void Update\+Text\+::\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called when the script is first initialized. This method checks all child objects of the current Game\+Object to find one with the name "{}text"{} and attempts to assign the Text\+Mesh\+Pro\+UGUI component from it to {\ttfamily text\+Component}. If no matching child is found, an error is logged. 
+
+The method assumes that there is a child object named "{}text"{} that has a Text\+Mesh\+Pro\+UGUI component attached. If no such child is found, it will output an error message in the console. \Hypertarget{class_update_text_a9235d59b1a74ac43032aa00a496ff6ab}\index{UpdateText@{UpdateText}!UpdateTextContent@{UpdateTextContent}}
+\index{UpdateTextContent@{UpdateTextContent}!UpdateText@{UpdateText}}
+\doxysubsubsection{\texorpdfstring{UpdateTextContent()}{UpdateTextContent()}}
+{\footnotesize\ttfamily \label{class_update_text_a9235d59b1a74ac43032aa00a496ff6ab} 
+void Update\+Text\+::\+Update\+Text\+Content (\begin{DoxyParamCaption}\item[{string}]{new\+Text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the text displayed by the Text\+Mesh\+Pro\+UGUI component. This method assigns the provided \texorpdfstring{$<$}{<}paramref name="{}"{}new\+Text"{}"{}/\texorpdfstring{$>$}{>} value to the text\+Component\textquotesingle{}s text. If the Text\+Mesh\+Pro\+UGUI component is not found, an error message is logged. 
+
+\texorpdfstring{$<$}{<}param name="{}"{}new\+Text"{}"{}\texorpdfstring{$>$}{>}The new text that will replace the current text.
+
+This method will only update the text if {\ttfamily text\+Component} is valid (not null). If {\ttfamily text\+Component} is null, an error is logged to inform the developer. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_update_text_aa9483b6a3ec43c387abfbabb417a643f}\index{UpdateText@{UpdateText}!textComponent@{textComponent}}
+\index{textComponent@{textComponent}!UpdateText@{UpdateText}}
+\doxysubsubsection{\texorpdfstring{textComponent}{textComponent}}
+{\footnotesize\ttfamily \label{class_update_text_aa9483b6a3ec43c387abfbabb417a643f} 
+Text\+Mesh\+Pro\+UGUI Update\+Text\+::text\+Component\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The Text\+Mesh\+Pro\+UGUI component used to display the text. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\mbox{\hyperlink{_update_text_8cs}{Update\+Text.\+cs}}\end{DoxyCompactItemize}

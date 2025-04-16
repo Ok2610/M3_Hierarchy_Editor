@@ -1,0 +1,1037 @@
+\doxysection{Display\+Tags Class Reference}
+\hypertarget{class_display_tags}{}\label{class_display_tags}\index{DisplayTags@{DisplayTags}}
+
+
+Inheritance diagram for Display\+Tags\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_display_tags__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Display\+Tags\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_display_tags__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerator \mbox{\hyperlink{class_display_tags_a629c9bb1162b7783f782a170da64b564}{Add\+Node\+From\+Database}} (int hierarchy\+Id, string name, int tag\+Type\+Id, int tag\+Set\+Id, int? parent\+Node\+Id)
+\begin{DoxyCompactList}\small\item\em Adds a new node to the database by sending an HTTP POST request to the API. The function serializes the node information into JSON and sends the request to the API to add the node. If the addition is successful, another API is called to display the updated node hierarchy. \end{DoxyCompactList}\item 
+IEnumerator \mbox{\hyperlink{class_display_tags_acd5bf7c591dc5abebbb435807b3c893f}{Delete\+Node\+From\+Database}} (int node\+Id)
+\begin{DoxyCompactList}\small\item\em Deletes a node from the database by sending an HTTP DELETE request to the API. The function locates the ID of the node to delete, constructs the request URL, and performs the deletion. After a successful deletion, the node hierarchy is updated. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_display_tags_a4fc9c44e686df0f8c4f671c535ebd298}{count\+Node\+By\+Depth}} (\mbox{\hyperlink{class_nodes}{Nodes}} node, int depth)
+\begin{DoxyCompactList}\small\item\em Calculates and updates the number of nodes present at each depth level in a node hierarchy. This function is recursive and traverses all children of a node while keeping a counter for each depth level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_display_tags_afd6956bcfc8809eb84caecb9e99b0030}{sign\+Prefab}}
+\item 
+Vector3 \mbox{\hyperlink{class_display_tags_a209c446fc8af1c38776e46826ae07dc9}{scale\+Corrector}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_display_tags_a11d0579204a420fe987f18b190e41927}{Start}} ()
+\begin{DoxyCompactList}\small\item\em This method is called at the start of the object\textquotesingle{}s lifecycle, during initialization. It initializes necessary variables related to the camera and the screen objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_display_tags_af28cd2806e067aac0160202087ec4906}{Update}} ()
+\begin{DoxyCompactList}\small\item\em This method is called once per frame to update the game logic. It handles screen resizing via arrow keys, drag and drop functionality, and various node-\/related interactions (e.\+g., adding, deleting, showing nodes). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_display_tags_a7f230190f53c51e2ce57177ca46f3bda}{On\+Trigger\+Enter}} (Collider other)
+\begin{DoxyCompactList}\small\item\em Called when another collider enters the trigger zone of this object. Detects interactions with specific tagged objects to track the current node being touched. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_display_tags_ae1d9105c166fc42fd505628874259ff6}{On\+Trigger\+Exit}} (Collider other)
+\begin{DoxyCompactList}\small\item\em Called when another collider exits the trigger zone of this object. Clears the reference to the previously touched node if it matches the exiting object. \end{DoxyCompactList}\item 
+IEnumerator \mbox{\hyperlink{class_display_tags_ae0170ecd1a82ea7b1f0e46c1c036a27d}{Call\+Show\+Node\+API}} (int id\+Node)
+\begin{DoxyCompactList}\small\item\em Sends a request to the API to fetch data related to a specific node and its hierarchy. It clears existing data and destroys previously instantiated nodes before updating the visual with the new node data. \end{DoxyCompactList}\item 
+IEnumerator \mbox{\hyperlink{class_display_tags_a86129df2700ab982292f9029616efbe8}{Call\+Show\+Hierarchy\+API}} (int id\+Hierarchy)
+\begin{DoxyCompactList}\small\item\em Sends a request to the API to fetch a hierarchy of nodes based on the specified hierarchy ID. Clears the existing visual data, sends requests to retrieve node data, and processes the retrieved data to update the visual. \end{DoxyCompactList}\item 
+IEnumerator \mbox{\hyperlink{class_display_tags_a70d3da52ef0ba3cfd6420447f40e0c2c}{Explore\+Nodes}} (string json\+File)
+\begin{DoxyCompactList}\small\item\em Explores the nodes hierarchy by creating and displaying nodes recursively based on the JSON data received. It positions the nodes on the screen and adjusts their scale and layout to fit within the visual bounds of the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_display_tags_a1309504cf0a45d4a667a09b5e7f95ffc}{Display\+Node\+Children}} (List$<$ \mbox{\hyperlink{class_nodes}{Nodes}} $>$ children, int depth, Transform parent\+Transform, int? parentnode\+Id)
+\begin{DoxyCompactList}\small\item\em Displays the child nodes of a given parent node by creating new "{}sign"{} game objects for each child. This method is recursive and will display all descendants of the initial node, positioning them on the screen according to their depth in the hierarchy and adjusting the spacing between nodes based on the screen scale. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_display_tags_a3756fa00014cd94c339c28ce07b96eca}{Create\+Sign}} (\mbox{\hyperlink{class_nodes}{Nodes}} current\+Node, Vector3 position, int? parentnode\+Id)
+\begin{DoxyCompactList}\small\item\em Creates a sign object for a given node at the specified position. The sign object represents the node visually in the scene, with its properties like ID, tag, and text. The sign is also added to a dictionary for later reference and linked to the parent node if applicable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_display_tags_af9c20907028b0542be286d75c517cfe3}{Create\+Line}} (Transform parent, Transform child, Color line\+Color)
+\begin{DoxyCompactList}\small\item\em Creates a visual line between a parent and child transform, representing their relationship. If a line already exists between the same parent and child, it is replaced with a new one. The line is rendered using a {\ttfamily Line\+Renderer} component and customized with a specified color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_display_tags_a1e681f4b9f513d07ebee9998a678a065}{Update\+Line\+Positions}} (Transform parent, Transform child, Line\+Renderer line\+Renderer)
+\begin{DoxyCompactList}\small\item\em Updates the positions of the line between the parent and child transforms. This method is called when the parent or child moves, to ensure the line is updated accordingly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_display_tags_aab78b94be69b23edda2e673ea9adba80}{Set\+Transparency}} (Game\+Object obj, float alpha)
+\begin{DoxyCompactList}\small\item\em Sets the transparency (alpha value) of the given object and all of its children that have a Renderer component. This method is useful when you need to adjust the visibility of an object and its hierarchy in the scene. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_display_tags_a3cc6347a3a21f05e630e3c16378f6b2e}{Apply\+Transparency}} (Renderer renderer, float alpha)
+\begin{DoxyCompactList}\small\item\em Applies transparency (alpha value) to a {\ttfamily Renderer} component. This method modifies the color of the material and ensures the material supports transparency by adjusting its blend mode and other render settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_display_tags_a87e756b5dc049093bd2db04e54ec9000}{Try\+Start\+Dragging}} ()
+\begin{DoxyCompactList}\small\item\em This method attempts to start dragging an object. It checks whether the touched object is a node or a screen mover, and initializes necessary variables and visual effects to start the drag process. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_display_tags_a8fa68ccfec9b23b8ec30fdcabe102d6f}{Drag\+Object}} ()
+\begin{DoxyCompactList}\small\item\em This method handles the dragging of an object. It updates the object\textquotesingle{}s position based on the mouse position in the scene. It also ensures that the object is moved along a specific plane (the screen plane) and updates the connections between nodes if necessary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_display_tags_a96ca4c4c93dc33f395e527d4eb05a2b7}{Update\+Node\+Connections}} (Game\+Object node)
+\begin{DoxyCompactList}\small\item\em Updates the connection lines between parent and child nodes. This method redraws the relationship lines between nodes when one of them is moved. It handles parent-\/child relationships by checking the {\ttfamily parent\+Child\+Dictionary}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_display_tags_a8a531271715a281b9128daa0c6b96bf6}{Stop\+Dragging}} ()
+\begin{DoxyCompactList}\small\item\em Stops the dragging operation of an object. This function is called when the user releases the object they were dragging. It resets the transparency properties of the object, checks for collisions with other nodes if necessary, and updates the connection lines between nodes if the dragged object is a screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_display_tags_a2cf8dd5b3705569e0cec84477fa13c63}{Check\+Collision\+With\+Other\+Nodes}} (Game\+Object dragged\+Node)
+\begin{DoxyCompactList}\small\item\em Checks for collisions between the dragged node and other nodes in the scene. This function uses the Physics.\+Overlap\+Box method to detect collisions between the Box\+Collider of the currently dragged node and other colliders in the scene. If a collision with another node is detected, a PUT request is made to update the API. \end{DoxyCompactList}\item 
+IEnumerator \mbox{\hyperlink{class_display_tags_af685a0371493074db3a7a92bfd0e81ef}{Update\+Parent\+API}} (Game\+Object dragged\+Node, Game\+Object new\+Parent\+Node)
+\begin{DoxyCompactList}\small\item\em Sends a PUT request to update the parent of a moved node in the API. This function extracts the ID of the moved node and its previous parent from the scene information, then sends a PUT request containing the new parent ID and old parent ID to a REST API. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_display_tags_ad1aab244954dc364f5d3df4eb29366a6}{Extract\+Id}} (string text\+Value)
+\begin{DoxyCompactList}\small\item\em Extracts the node ID from a string using a regular expression. The function searches for a specific pattern in the text (specifically after "{}\+ID\+:"{}) and returns the ID as an integer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Camera \mbox{\hyperlink{class_display_tags_abc9467ecbac48c70ab587b4c77942fb0}{main\+Camera}}
+\item 
+Raycast\+Hit \mbox{\hyperlink{class_display_tags_a200e63650c957a2092192b13a5faeef8}{hit}}
+\item 
+bool \mbox{\hyperlink{class_display_tags_a6d7a752464c072c86718f87a35baaa14}{is\+Dragging}} = false
+\item 
+Vector3 \mbox{\hyperlink{class_display_tags_a26cdf7afce25ddec33314dbe299d545a}{offset}}
+\item 
+Game\+Object \mbox{\hyperlink{class_display_tags_acd8a051112bb6cf95f9d4c18f97f1b10}{dragged\+Object}}
+\item 
+Dictionary$<$ Game\+Object, List$<$ Game\+Object $>$ $>$ \mbox{\hyperlink{class_display_tags_a40ee137ad9d00b4d4829c6c8c71f652b}{parent\+Child\+Dictionary}} = new Dictionary$<$Game\+Object, List$<$Game\+Object$>$$>$()
+\item 
+Dictionary$<$(Game\+Object parent, Game\+Object child), Line\+Renderer $>$ \mbox{\hyperlink{class_display_tags_a6dabf0ed193f49b11695d27e1de7f4f2}{existing\+Lines}} = new Dictionary$<$(Game\+Object, Game\+Object), Line\+Renderer$>$()
+\item 
+Dictionary$<$ Game\+Object, \mbox{\hyperlink{class_node_info}{Node\+Info}} $>$ \mbox{\hyperlink{class_display_tags_a6903131b69a6ab525f40151f47ab6a37}{node\+To\+Info\+Dictionary}} = new Dictionary$<$Game\+Object, \mbox{\hyperlink{class_node_info}{Node\+Info}}$>$()
+\item 
+Dictionary$<$ int, int $>$ \mbox{\hyperlink{class_display_tags_a789c2c021cbaa97d6783605891e97080}{nb\+Node\+By\+Depth}} = new Dictionary$<$int, int$>$()
+\item 
+Dictionary$<$ int, int $>$ \mbox{\hyperlink{class_display_tags_ad168cb46b41df2c63384ee106f8fc00b}{nb\+Max\+Node\+By\+Depth}}
+\item 
+Dictionary$<$ Transform, Vector3 $>$ \mbox{\hyperlink{class_display_tags_a2bac4b3139c197f1e40ee1a8ae22e16a}{original\+Child\+Scales}} = new Dictionary$<$Transform, Vector3$>$()
+\item 
+Game\+Object \mbox{\hyperlink{class_display_tags_a0eaa568e9ec322a01dad8e9fe3882740}{node\+Option\+Panel}}
+\item 
+Game\+Object \mbox{\hyperlink{class_display_tags_a5876f41abb381fbc53d1f634c26bca3c}{add\+Node\+Panel}}
+\item 
+Game\+Object \mbox{\hyperlink{class_display_tags_ae2d333d60a947e1f3e433faf1ded9249}{Delete\+Node\+Panel}}
+\item 
+Game\+Object \mbox{\hyperlink{class_display_tags_a7609cb9058029e8e2749e4f6ea6611c9}{Delete\+Branch\+Panel}}
+\item 
+bool \mbox{\hyperlink{class_display_tags_a3ab7fc5187b02370825630ea0d79966c}{semaphore}} = false
+\item 
+bool \mbox{\hyperlink{class_display_tags_aa44569df931438a448c0d810e4373100}{update\+Visuel}} = false
+\item 
+Rect\+Transform \mbox{\hyperlink{class_display_tags_a41687dd8636368699e1242e7a12b319b}{screen\+Rect}}
+\item 
+Game\+Object \mbox{\hyperlink{class_display_tags_a60f54dba85f800bb5a58cf221a2d0687}{screen\+Object}}
+\item 
+Vector3 \mbox{\hyperlink{class_display_tags_a2bf56477804a86f325d7e07a4ab591b7}{screen\+Scale}}
+\item 
+float \mbox{\hyperlink{class_display_tags_a3563b77e8539ae5cd0eee75a62ee4f85}{screen\+Height}}
+\item 
+float \mbox{\hyperlink{class_display_tags_af39675c676a41d00ed6294d7cf82c8f0}{node\+Width}}
+\item 
+float \mbox{\hyperlink{class_display_tags_a8e8ed34248e4a6485d259f07d26f877e}{x\+Spacing}}
+\item 
+Game\+Object \mbox{\hyperlink{class_display_tags_acacfc2e63a224d7dd48e3214b95c6f03}{touched\+Node}} = null
+\item 
+Text\+Mesh\+Pro\+UGUI \mbox{\hyperlink{class_display_tags_a804360004e59ca31db5ee15e187f672d}{tmp\+Text}}
+\item 
+int \mbox{\hyperlink{class_display_tags_a3bc0ab9de74647be9b31ef493ad239e4}{default\+Node}} = 0
+\item 
+int \mbox{\hyperlink{class_display_tags_a5abb8e1bb5ea06b42d491dc457770310}{Screen\+Width\+In\+Nodes}}
+\item 
+float \mbox{\hyperlink{class_display_tags_a22bf41c07b35a14bb77de7c64d258512}{screen\+Width}}
+\item 
+float \mbox{\hyperlink{class_display_tags_a126d18bbff71b509fcca2da9330ab872}{screen\+Initial\+Width}}
+\item 
+float \mbox{\hyperlink{class_display_tags_ac6fe90cd9cc115e1bda0573c77c8c282}{scale\+Adaptator}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_display_tags_a629c9bb1162b7783f782a170da64b564}\index{DisplayTags@{DisplayTags}!AddNodeFromDatabase@{AddNodeFromDatabase}}
+\index{AddNodeFromDatabase@{AddNodeFromDatabase}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{AddNodeFromDatabase()}{AddNodeFromDatabase()}}
+{\footnotesize\ttfamily \label{class_display_tags_a629c9bb1162b7783f782a170da64b564} 
+IEnumerator Display\+Tags\+::\+Add\+Node\+From\+Database (\begin{DoxyParamCaption}\item[{int}]{hierarchy\+Id}{, }\item[{string}]{name}{, }\item[{int}]{tag\+Type\+Id}{, }\item[{int}]{tag\+Set\+Id}{, }\item[{int?}]{parent\+Node\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a new node to the database by sending an HTTP POST request to the API. The function serializes the node information into JSON and sends the request to the API to add the node. If the addition is successful, another API is called to display the updated node hierarchy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hierarchy\+Id} & The ID of the hierarchy to which the node belongs.\\
+\hline
+{\em name} & The name of the node to be added.\\
+\hline
+{\em tag\+Type\+Id} & The ID of the tag type associated with the node.\\
+\hline
+{\em tag\+Set\+Id} & The ID of the tag set to which the node belongs.\\
+\hline
+{\em parent\+Node\+Id} & The ID of the parent node. Can be null if the node is a root node.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A coroutine that sends the POST request asynchronously and waits for the server\textquotesingle{}s response.
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a629c9bb1162b7783f782a170da64b564_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a629c9bb1162b7783f782a170da64b564_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_a3cc6347a3a21f05e630e3c16378f6b2e}\index{DisplayTags@{DisplayTags}!ApplyTransparency@{ApplyTransparency}}
+\index{ApplyTransparency@{ApplyTransparency}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{ApplyTransparency()}{ApplyTransparency()}}
+{\footnotesize\ttfamily \label{class_display_tags_a3cc6347a3a21f05e630e3c16378f6b2e} 
+void Display\+Tags\+::\+Apply\+Transparency (\begin{DoxyParamCaption}\item[{Renderer}]{renderer}{, }\item[{float}]{alpha}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Applies transparency (alpha value) to a {\ttfamily Renderer} component. This method modifies the color of the material and ensures the material supports transparency by adjusting its blend mode and other render settings. 
+
+\texorpdfstring{$<$}{<}param name="{}"{}renderer"{}"{}\texorpdfstring{$>$}{>}The {\ttfamily Renderer} component whose material transparency will be adjusted.
+
+\texorpdfstring{$<$}{<}param name="{}"{}alpha"{}"{}\texorpdfstring{$>$}{>}The alpha value representing the transparency. A value between 0 (fully transparent) and 1 (fully opaque).
+
+
+\begin{DoxyItemize}
+\item This method modifies the {\ttfamily Renderer}\textquotesingle{}s material color by adjusting the alpha channel.
+\item It ensures that the material supports transparency by setting the appropriate blend mode and other relevant properties.
+\item It disables alpha testing, enables alpha blending, and sets the render queue to ensure proper rendering of transparent objects. 
+\end{DoxyItemize}Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a3cc6347a3a21f05e630e3c16378f6b2e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_a86129df2700ab982292f9029616efbe8}\index{DisplayTags@{DisplayTags}!CallShowHierarchyAPI@{CallShowHierarchyAPI}}
+\index{CallShowHierarchyAPI@{CallShowHierarchyAPI}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{CallShowHierarchyAPI()}{CallShowHierarchyAPI()}}
+{\footnotesize\ttfamily \label{class_display_tags_a86129df2700ab982292f9029616efbe8} 
+IEnumerator Display\+Tags\+::\+Call\+Show\+Hierarchy\+API (\begin{DoxyParamCaption}\item[{int}]{id\+Hierarchy}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Sends a request to the API to fetch a hierarchy of nodes based on the specified hierarchy ID. Clears the existing visual data, sends requests to retrieve node data, and processes the retrieved data to update the visual. 
+
+\texorpdfstring{$<$}{<}param name="{}"{}id\+Hierarchy"{}"{}\texorpdfstring{$>$}{>}The ID of the hierarchy for which node data is being requested from the API.
+
+This method performs the following steps\+:
+\begin{DoxyItemize}
+\item Clears all existing node-\/related data from dictionaries and destroys previously instantiated node Game\+Objects.
+\item Sends a GET request to fetch the hierarchy associated with the specified ID.
+\item For each node in the hierarchy, sends a second request to fetch the full node details and processes the response.
+\item If the request is successful, it calls another coroutine to explore and process the nodes.
+\item If any API request fails, an error message is logged for the specific request. 
+\end{DoxyItemize}
+
+\texorpdfstring{$<$}{<}exception cref="{}"{}Unity\+Web\+Request\+Exception"{}"{}\texorpdfstring{$>$}{>}Thrown if there is an issue with the API request, such as connection issues or invalid response.Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a86129df2700ab982292f9029616efbe8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a86129df2700ab982292f9029616efbe8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_ae0170ecd1a82ea7b1f0e46c1c036a27d}\index{DisplayTags@{DisplayTags}!CallShowNodeAPI@{CallShowNodeAPI}}
+\index{CallShowNodeAPI@{CallShowNodeAPI}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{CallShowNodeAPI()}{CallShowNodeAPI()}}
+{\footnotesize\ttfamily \label{class_display_tags_ae0170ecd1a82ea7b1f0e46c1c036a27d} 
+IEnumerator Display\+Tags\+::\+Call\+Show\+Node\+API (\begin{DoxyParamCaption}\item[{int}]{id\+Node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Sends a request to the API to fetch data related to a specific node and its hierarchy. It clears existing data and destroys previously instantiated nodes before updating the visual with the new node data. 
+
+\texorpdfstring{$<$}{<}param name="{}"{}id\+Node"{}"{}\texorpdfstring{$>$}{>}The ID of the node for which data is being requested from the API.
+
+This method performs the following steps\+:
+\begin{DoxyItemize}
+\item Clears all existing node-\/related data from dictionaries and destroys previously instantiated node Game\+Objects.
+\item Sends a GET request to the API to fetch the hierarchy of the node with the specified ID.
+\item If the request is successful, it parses the response and calls another coroutine to explore and process the nodes.
+\item If there is an error in the API request, an error message is logged. 
+\end{DoxyItemize}
+
+\texorpdfstring{$<$}{<}exception cref="{}"{}Unity\+Web\+Request\+Exception"{}"{}\texorpdfstring{$>$}{>}Thrown if there is an issue with the API request, such as connection issues or invalid response.Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_ae0170ecd1a82ea7b1f0e46c1c036a27d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_ae0170ecd1a82ea7b1f0e46c1c036a27d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_a2cf8dd5b3705569e0cec84477fa13c63}\index{DisplayTags@{DisplayTags}!CheckCollisionWithOtherNodes@{CheckCollisionWithOtherNodes}}
+\index{CheckCollisionWithOtherNodes@{CheckCollisionWithOtherNodes}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{CheckCollisionWithOtherNodes()}{CheckCollisionWithOtherNodes()}}
+{\footnotesize\ttfamily \label{class_display_tags_a2cf8dd5b3705569e0cec84477fa13c63} 
+void Display\+Tags\+::\+Check\+Collision\+With\+Other\+Nodes (\begin{DoxyParamCaption}\item[{Game\+Object}]{dragged\+Node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Checks for collisions between the dragged node and other nodes in the scene. This function uses the Physics.\+Overlap\+Box method to detect collisions between the Box\+Collider of the currently dragged node and other colliders in the scene. If a collision with another node is detected, a PUT request is made to update the API. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dragged\+Node} & The Game\+Object representing the node currently being dragged. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a2cf8dd5b3705569e0cec84477fa13c63_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a2cf8dd5b3705569e0cec84477fa13c63_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_a4fc9c44e686df0f8c4f671c535ebd298}\index{DisplayTags@{DisplayTags}!countNodeByDepth@{countNodeByDepth}}
+\index{countNodeByDepth@{countNodeByDepth}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{countNodeByDepth()}{countNodeByDepth()}}
+{\footnotesize\ttfamily \label{class_display_tags_a4fc9c44e686df0f8c4f671c535ebd298} 
+void Display\+Tags\+::count\+Node\+By\+Depth (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_nodes}{Nodes}}}]{node}{, }\item[{int}]{depth}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates and updates the number of nodes present at each depth level in a node hierarchy. This function is recursive and traverses all children of a node while keeping a counter for each depth level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The current node to process.\\
+\hline
+{\em depth} & The current depth in the hierarchy.\\
+\hline
+\end{DoxyParams}
+
+
+The function updates the \doxylink{class_display_tags_a789c2c021cbaa97d6783605891e97080}{nb\+Node\+By\+Depth} dictionary, which tracks the number of nodes at each depth. It also updates the \doxylink{class_display_tags_a5abb8e1bb5ea06b42d491dc457770310}{Screen\+Width\+In\+Nodes} variable to reflect the maximum number of nodes found at any given depth. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{class_display_tags_a4fc9c44e686df0f8c4f671c535ebd298_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a4fc9c44e686df0f8c4f671c535ebd298_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_af9c20907028b0542be286d75c517cfe3}\index{DisplayTags@{DisplayTags}!CreateLine@{CreateLine}}
+\index{CreateLine@{CreateLine}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{CreateLine()}{CreateLine()}}
+{\footnotesize\ttfamily \label{class_display_tags_af9c20907028b0542be286d75c517cfe3} 
+void Display\+Tags\+::\+Create\+Line (\begin{DoxyParamCaption}\item[{Transform}]{parent}{, }\item[{Transform}]{child}{, }\item[{Color}]{line\+Color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Creates a visual line between a parent and child transform, representing their relationship. If a line already exists between the same parent and child, it is replaced with a new one. The line is rendered using a {\ttfamily Line\+Renderer} component and customized with a specified color. 
+
+\texorpdfstring{$<$}{<}param name="{}"{}parent"{}"{}\texorpdfstring{$>$}{>}The parent transform in the hierarchy, used as the starting point of the line.
+
+\texorpdfstring{$<$}{<}param name="{}"{}child"{}"{}\texorpdfstring{$>$}{>}The child transform in the hierarchy, used as the ending point of the line.
+
+\texorpdfstring{$<$}{<}param name="{}"{}line\+Color"{}"{}\texorpdfstring{$>$}{>}The color of the line to be drawn between the parent and child.
+
+
+\begin{DoxyItemize}
+\item This method checks if a line already exists between the parent and child, and if so, it destroys the existing line before creating a new one.
+\item A new Game\+Object is created with a {\ttfamily Line\+Renderer} component that renders a line between the parent and child positions.
+\item The line width is adjusted based on the scale of the scene (controlled by {\ttfamily scale\+Corrector}).
+\item A new material is created for the line and the specified color is applied. 
+\end{DoxyItemize}Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_af9c20907028b0542be286d75c517cfe3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_a3756fa00014cd94c339c28ce07b96eca}\index{DisplayTags@{DisplayTags}!CreateSign@{CreateSign}}
+\index{CreateSign@{CreateSign}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{CreateSign()}{CreateSign()}}
+{\footnotesize\ttfamily \label{class_display_tags_a3756fa00014cd94c339c28ce07b96eca} 
+Game\+Object Display\+Tags\+::\+Create\+Sign (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_nodes}{Nodes}}}]{current\+Node}{, }\item[{Vector3}]{position}{, }\item[{int?}]{parentnode\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Creates a sign object for a given node at the specified position. The sign object represents the node visually in the scene, with its properties like ID, tag, and text. The sign is also added to a dictionary for later reference and linked to the parent node if applicable. 
+
+\texorpdfstring{$<$}{<}param name="{}"{}current\+Node"{}"{}\texorpdfstring{$>$}{>}The node data containing information like ID, tag, and hierarchy details.
+
+\texorpdfstring{$<$}{<}param name="{}"{}position"{}"{}\texorpdfstring{$>$}{>}The position in the scene where the sign should be placed.
+
+\texorpdfstring{$<$}{<}param name="{}"{}parentnode\+Id"{}"{}\texorpdfstring{$>$}{>}The ID of the parent node, if applicable. This helps in establishing parent-\/child relationships between nodes.
+
+\begin{DoxyReturn}{Returns}
+A Game\+Object representing the visual sign of the node.
+\end{DoxyReturn}
+
+
+This method\+:
+\begin{DoxyItemize}
+\item Instantiates a sign prefab at the specified position and applies the necessary rotation.
+\item Updates the scale of the sign based on predefined values.
+\item Stores information about the node in a dictionary for later reference.
+\item Updates the sign\textquotesingle{}s text content with the node\textquotesingle{}s details (e.\+g., ID, tag name).
+\item The method also handles the case where the node is the root by adjusting its position. 
+\end{DoxyItemize}
+
+\texorpdfstring{$<$}{<}exception cref="{}"{}Argument\+Null\+Exception"{}"{}\texorpdfstring{$>$}{>}Thrown if the {\ttfamily sign\+Prefab} or other critical components are not properly assigned.Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a3756fa00014cd94c339c28ce07b96eca_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_acd5bf7c591dc5abebbb435807b3c893f}\index{DisplayTags@{DisplayTags}!DeleteNodeFromDatabase@{DeleteNodeFromDatabase}}
+\index{DeleteNodeFromDatabase@{DeleteNodeFromDatabase}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{DeleteNodeFromDatabase()}{DeleteNodeFromDatabase()}}
+{\footnotesize\ttfamily \label{class_display_tags_acd5bf7c591dc5abebbb435807b3c893f} 
+IEnumerator Display\+Tags\+::\+Delete\+Node\+From\+Database (\begin{DoxyParamCaption}\item[{int}]{node\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes a node from the database by sending an HTTP DELETE request to the API. The function locates the ID of the node to delete, constructs the request URL, and performs the deletion. After a successful deletion, the node hierarchy is updated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Id} & The ID of the node to delete.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A coroutine that sends the DELETE request asynchronously and waits for the server\textquotesingle{}s response.
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_acd5bf7c591dc5abebbb435807b3c893f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_acd5bf7c591dc5abebbb435807b3c893f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_a1309504cf0a45d4a667a09b5e7f95ffc}\index{DisplayTags@{DisplayTags}!DisplayNodeChildren@{DisplayNodeChildren}}
+\index{DisplayNodeChildren@{DisplayNodeChildren}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{DisplayNodeChildren()}{DisplayNodeChildren()}}
+{\footnotesize\ttfamily \label{class_display_tags_a1309504cf0a45d4a667a09b5e7f95ffc} 
+void Display\+Tags\+::\+Display\+Node\+Children (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_nodes}{Nodes}} $>$}]{children}{, }\item[{int}]{depth}{, }\item[{Transform}]{parent\+Transform}{, }\item[{int?}]{parentnode\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Displays the child nodes of a given parent node by creating new "{}sign"{} game objects for each child. This method is recursive and will display all descendants of the initial node, positioning them on the screen according to their depth in the hierarchy and adjusting the spacing between nodes based on the screen scale. 
+
+\texorpdfstring{$<$}{<}param name="{}"{}children"{}"{}\texorpdfstring{$>$}{>}The list of child nodes to display.
+
+\texorpdfstring{$<$}{<}param name="{}"{}depth"{}"{}\texorpdfstring{$>$}{>}The current depth level in the node hierarchy. Used for calculating node positioning.
+
+\texorpdfstring{$<$}{<}param name="{}"{}parent\+Transform"{}"{}\texorpdfstring{$>$}{>}The parent transform to attach the child nodes to. This determines their relative positioning.
+
+\texorpdfstring{$<$}{<}param name="{}"{}parentnode\+Id"{}"{}\texorpdfstring{$>$}{>}The ID of the parent node. This is used to store node information in dictionaries for later reference.
+
+This method performs the following steps\+:
+\begin{DoxyItemize}
+\item Calculates the spacing between nodes based on the node\textquotesingle{}s dimensions and the screen scale factor.
+\item Creates a new game object for each child node and attaches it to the screen at the calculated position.
+\item Creates a line between the parent and child nodes for visual connection.
+\item Recursively calls itself to display the children of the current child nodes, thus building the entire node tree. 
+\end{DoxyItemize}
+
+\texorpdfstring{$<$}{<}exception cref="{}"{}Argument\+Null\+Exception"{}"{}\texorpdfstring{$>$}{>}Thrown if the {\ttfamily children} list is null.
+
+\texorpdfstring{$<$}{<}exception cref="{}"{}Key\+Not\+Found\+Exception"{}"{}\texorpdfstring{$>$}{>}Thrown if the {\ttfamily parent\+Transform.\+game\+Object} is not found in the {\ttfamily parent\+Child\+Dictionary}.Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a1309504cf0a45d4a667a09b5e7f95ffc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a1309504cf0a45d4a667a09b5e7f95ffc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_a8fa68ccfec9b23b8ec30fdcabe102d6f}\index{DisplayTags@{DisplayTags}!DragObject@{DragObject}}
+\index{DragObject@{DragObject}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{DragObject()}{DragObject()}}
+{\footnotesize\ttfamily \label{class_display_tags_a8fa68ccfec9b23b8ec30fdcabe102d6f} 
+void Display\+Tags\+::\+Drag\+Object (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+This method handles the dragging of an object. It updates the object\textquotesingle{}s position based on the mouse position in the scene. It also ensures that the object is moved along a specific plane (the screen plane) and updates the connections between nodes if necessary. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a8fa68ccfec9b23b8ec30fdcabe102d6f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{class_display_tags_a8fa68ccfec9b23b8ec30fdcabe102d6f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_a70d3da52ef0ba3cfd6420447f40e0c2c}\index{DisplayTags@{DisplayTags}!ExploreNodes@{ExploreNodes}}
+\index{ExploreNodes@{ExploreNodes}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{ExploreNodes()}{ExploreNodes()}}
+{\footnotesize\ttfamily \label{class_display_tags_a70d3da52ef0ba3cfd6420447f40e0c2c} 
+IEnumerator Display\+Tags\+::\+Explore\+Nodes (\begin{DoxyParamCaption}\item[{string}]{json\+File}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Explores the nodes hierarchy by creating and displaying nodes recursively based on the JSON data received. It positions the nodes on the screen and adjusts their scale and layout to fit within the visual bounds of the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em json\+File} & A JSON string containing the node hierarchy to be displayed.\\
+\hline
+\end{DoxyParams}
+
+
+This method performs the following steps\+:
+\begin{DoxyItemize}
+\item Initializes the screen and node scale variables.
+\item Creates the root node and attaches it to the screen at the appropriate position.
+\item Recursively displays the child nodes of the root node by calling the {\ttfamily Display\+Node\+Children} function.
+\item Calculates the width of the screen based on the number of nodes and adjusts the scaling of the screen accordingly.
+\item Adjusts the position and scale of the nodes to ensure they fit within the screen, scaling them proportionally. 
+\end{DoxyItemize}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown if the JSON file is null or empty.\\
+\hline
+{\em Null\+Reference\+Exception} & Thrown if any required game objects or components (like \textquotesingle{}Screen\textquotesingle{}) are not found in the scene.\\
+\hline
+\end{DoxyExceptions}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a70d3da52ef0ba3cfd6420447f40e0c2c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a70d3da52ef0ba3cfd6420447f40e0c2c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_ad1aab244954dc364f5d3df4eb29366a6}\index{DisplayTags@{DisplayTags}!ExtractId@{ExtractId}}
+\index{ExtractId@{ExtractId}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{ExtractId()}{ExtractId()}}
+{\footnotesize\ttfamily \label{class_display_tags_ad1aab244954dc364f5d3df4eb29366a6} 
+int Display\+Tags\+::\+Extract\+Id (\begin{DoxyParamCaption}\item[{string}]{text\+Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Extracts the node ID from a string using a regular expression. The function searches for a specific pattern in the text (specifically after "{}\+ID\+:"{}) and returns the ID as an integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text\+Value} & The text containing the ID to extract. The expected format is "{}\+ID\+: \mbox{[}id\mbox{]}"{} where \mbox{[}id\mbox{]} is an integer number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer representing the ID extracted from the text. Returns -\/1 if extraction fails. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_ad1aab244954dc364f5d3df4eb29366a6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_a7f230190f53c51e2ce57177ca46f3bda}\index{DisplayTags@{DisplayTags}!OnTriggerEnter@{OnTriggerEnter}}
+\index{OnTriggerEnter@{OnTriggerEnter}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{OnTriggerEnter()}{OnTriggerEnter()}}
+{\footnotesize\ttfamily \label{class_display_tags_a7f230190f53c51e2ce57177ca46f3bda} 
+void Display\+Tags\+::\+On\+Trigger\+Enter (\begin{DoxyParamCaption}\item[{Collider}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called when another collider enters the trigger zone of this object. Detects interactions with specific tagged objects to track the current node being touched. 
+
+\texorpdfstring{$<$}{<}param name="{}"{}other"{}"{}\texorpdfstring{$>$}{>}The collider that entered the trigger zone.
+
+
+\begin{DoxyItemize}
+\item If the object has the tag "{}\+Node"{} (excluding "{}\+Display\+Node\+Option"{}) or "{}\+Move\+Screen"{}, it is considered as a touched node.
+\item Updates the {\ttfamily touched\+Node} reference to the currently collided object. 
+\end{DoxyItemize}\Hypertarget{class_display_tags_ae1d9105c166fc42fd505628874259ff6}\index{DisplayTags@{DisplayTags}!OnTriggerExit@{OnTriggerExit}}
+\index{OnTriggerExit@{OnTriggerExit}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{OnTriggerExit()}{OnTriggerExit()}}
+{\footnotesize\ttfamily \label{class_display_tags_ae1d9105c166fc42fd505628874259ff6} 
+void Display\+Tags\+::\+On\+Trigger\+Exit (\begin{DoxyParamCaption}\item[{Collider}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Called when another collider exits the trigger zone of this object. Clears the reference to the previously touched node if it matches the exiting object. 
+
+\texorpdfstring{$<$}{<}param name="{}"{}other"{}"{}\texorpdfstring{$>$}{>}The collider that exited the trigger zone.
+
+
+\begin{DoxyItemize}
+\item Ensures that {\ttfamily touched\+Node} is only cleared if it matches the object that just exited the trigger. 
+\end{DoxyItemize}\Hypertarget{class_display_tags_aab78b94be69b23edda2e673ea9adba80}\index{DisplayTags@{DisplayTags}!SetTransparency@{SetTransparency}}
+\index{SetTransparency@{SetTransparency}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{SetTransparency()}{SetTransparency()}}
+{\footnotesize\ttfamily \label{class_display_tags_aab78b94be69b23edda2e673ea9adba80} 
+void Display\+Tags\+::\+Set\+Transparency (\begin{DoxyParamCaption}\item[{Game\+Object}]{obj}{, }\item[{float}]{alpha}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Sets the transparency (alpha value) of the given object and all of its children that have a Renderer component. This method is useful when you need to adjust the visibility of an object and its hierarchy in the scene. 
+
+\texorpdfstring{$<$}{<}param name="{}"{}obj"{}"{}\texorpdfstring{$>$}{>}The main {\ttfamily Game\+Object} whose transparency will be set, as well as all of its child objects.
+
+\texorpdfstring{$<$}{<}param name="{}"{}alpha"{}"{}\texorpdfstring{$>$}{>}The alpha value representing the transparency. A value between 0 (fully transparent) and 1 (fully opaque).
+
+
+\begin{DoxyItemize}
+\item The method first checks if the provided object has a {\ttfamily Renderer} component and applies the transparency to it.
+\item Then, the transparency is applied recursively to all child objects that have a {\ttfamily Renderer} component.
+\item This can be useful for making an entire object and its children fade in or out, or to change their visibility dynamically during gameplay. 
+\end{DoxyItemize}Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_aab78b94be69b23edda2e673ea9adba80_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_aab78b94be69b23edda2e673ea9adba80_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_a11d0579204a420fe987f18b190e41927}\index{DisplayTags@{DisplayTags}!Start@{Start}}
+\index{Start@{Start}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_display_tags_a11d0579204a420fe987f18b190e41927} 
+void Display\+Tags\+::\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+This method is called at the start of the object\textquotesingle{}s lifecycle, during initialization. It initializes necessary variables related to the camera and the screen objects. 
+
+The method searches for the "{}\+Screen"{} object in the scene and initializes variables such as Rect\+Transform and screen size. If the "{}\+Screen"{} object is not found, an error message is logged. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Null\+Reference\+Exception} & Thrown if the "{}\+Screen"{} object cannot be found in the scene and is critical for further operations.\\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_display_tags_a8a531271715a281b9128daa0c6b96bf6}\index{DisplayTags@{DisplayTags}!StopDragging@{StopDragging}}
+\index{StopDragging@{StopDragging}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{StopDragging()}{StopDragging()}}
+{\footnotesize\ttfamily \label{class_display_tags_a8a531271715a281b9128daa0c6b96bf6} 
+void Display\+Tags\+::\+Stop\+Dragging (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Stops the dragging operation of an object. This function is called when the user releases the object they were dragging. It resets the transparency properties of the object, checks for collisions with other nodes if necessary, and updates the connection lines between nodes if the dragged object is a screen. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a8a531271715a281b9128daa0c6b96bf6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a8a531271715a281b9128daa0c6b96bf6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_a87e756b5dc049093bd2db04e54ec9000}\index{DisplayTags@{DisplayTags}!TryStartDragging@{TryStartDragging}}
+\index{TryStartDragging@{TryStartDragging}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{TryStartDragging()}{TryStartDragging()}}
+{\footnotesize\ttfamily \label{class_display_tags_a87e756b5dc049093bd2db04e54ec9000} 
+void Display\+Tags\+::\+Try\+Start\+Dragging (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+This method attempts to start dragging an object. It checks whether the touched object is a node or a screen mover, and initializes necessary variables and visual effects to start the drag process. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a87e756b5dc049093bd2db04e54ec9000_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a87e756b5dc049093bd2db04e54ec9000_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_af28cd2806e067aac0160202087ec4906}\index{DisplayTags@{DisplayTags}!Update@{Update}}
+\index{Update@{Update}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_display_tags_af28cd2806e067aac0160202087ec4906} 
+void Display\+Tags\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+This method is called once per frame to update the game logic. It handles screen resizing via arrow keys, drag and drop functionality, and various node-\/related interactions (e.\+g., adding, deleting, showing nodes). 
+
+The method performs the following tasks\+:
+\begin{DoxyItemize}
+\item Resizes the screen when the left or right arrow keys are pressed.
+\item Handles drag-\/and-\/drop interactions, allowing the user to drag objects in the scene.
+\item Manages interactions with nodes, such as displaying node options, adding nodes, and deleting nodes. 
+\end{DoxyItemize}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & Thrown when a required component or object is not found (e.\+g., "{}\+Input\+Field"{} or "{}\+Node"{}).\\
+\hline
+\end{DoxyExceptions}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_af28cd2806e067aac0160202087ec4906_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_a1e681f4b9f513d07ebee9998a678a065}\index{DisplayTags@{DisplayTags}!UpdateLinePositions@{UpdateLinePositions}}
+\index{UpdateLinePositions@{UpdateLinePositions}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{UpdateLinePositions()}{UpdateLinePositions()}}
+{\footnotesize\ttfamily \label{class_display_tags_a1e681f4b9f513d07ebee9998a678a065} 
+void Display\+Tags\+::\+Update\+Line\+Positions (\begin{DoxyParamCaption}\item[{Transform}]{parent}{, }\item[{Transform}]{child}{, }\item[{Line\+Renderer}]{line\+Renderer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Updates the positions of the line between the parent and child transforms. This method is called when the parent or child moves, to ensure the line is updated accordingly. 
+
+\texorpdfstring{$<$}{<}param name="{}"{}parent"{}"{}\texorpdfstring{$>$}{>}The parent transform, which is the start point of the line.
+
+\texorpdfstring{$<$}{<}param name="{}"{}child"{}"{}\texorpdfstring{$>$}{>}The child transform, which is the end point of the line.
+
+\texorpdfstring{$<$}{<}param name="{}"{}line\+Renderer"{}"{}\texorpdfstring{$>$}{>}The {\ttfamily Line\+Renderer} component that is responsible for drawing the line between the parent and child.
+
+
+\begin{DoxyItemize}
+\item This method ensures the visual line always connects the correct parent and child positions in the world space.
+\item The {\ttfamily Line\+Renderer} component\textquotesingle{}s positions are updated by setting the start (0) and end (1) points to the parent and child positions, respectively.
+\item It is useful to call this method when either the parent or child transform moves, so that the line follows the new positions. 
+\end{DoxyItemize}Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a1e681f4b9f513d07ebee9998a678a065_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_a96ca4c4c93dc33f395e527d4eb05a2b7}\index{DisplayTags@{DisplayTags}!UpdateNodeConnections@{UpdateNodeConnections}}
+\index{UpdateNodeConnections@{UpdateNodeConnections}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{UpdateNodeConnections()}{UpdateNodeConnections()}}
+{\footnotesize\ttfamily \label{class_display_tags_a96ca4c4c93dc33f395e527d4eb05a2b7} 
+void Display\+Tags\+::\+Update\+Node\+Connections (\begin{DoxyParamCaption}\item[{Game\+Object}]{node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Updates the connection lines between parent and child nodes. This method redraws the relationship lines between nodes when one of them is moved. It handles parent-\/child relationships by checking the {\ttfamily parent\+Child\+Dictionary}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The node whose connections need to be updated.\\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a96ca4c4c93dc33f395e527d4eb05a2b7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_a96ca4c4c93dc33f395e527d4eb05a2b7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_display_tags_af685a0371493074db3a7a92bfd0e81ef}\index{DisplayTags@{DisplayTags}!UpdateParentAPI@{UpdateParentAPI}}
+\index{UpdateParentAPI@{UpdateParentAPI}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{UpdateParentAPI()}{UpdateParentAPI()}}
+{\footnotesize\ttfamily \label{class_display_tags_af685a0371493074db3a7a92bfd0e81ef} 
+IEnumerator Display\+Tags\+::\+Update\+Parent\+API (\begin{DoxyParamCaption}\item[{Game\+Object}]{dragged\+Node}{, }\item[{Game\+Object}]{new\+Parent\+Node}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Sends a PUT request to update the parent of a moved node in the API. This function extracts the ID of the moved node and its previous parent from the scene information, then sends a PUT request containing the new parent ID and old parent ID to a REST API. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dragged\+Node} & The Game\+Object representing the moved node whose parent needs to be updated.\\
+\hline
+{\em new\+Parent\+Node} & The Game\+Object representing the new parent to which the moved node should be attached.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A coroutine that sends the PUT request and waits for the server response.
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_af685a0371493074db3a7a92bfd0e81ef_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_display_tags_af685a0371493074db3a7a92bfd0e81ef_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_display_tags_a5876f41abb381fbc53d1f634c26bca3c}\index{DisplayTags@{DisplayTags}!addNodePanel@{addNodePanel}}
+\index{addNodePanel@{addNodePanel}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{addNodePanel}{addNodePanel}}
+{\footnotesize\ttfamily \label{class_display_tags_a5876f41abb381fbc53d1f634c26bca3c} 
+Game\+Object Display\+Tags\+::add\+Node\+Panel\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a3bc0ab9de74647be9b31ef493ad239e4}\index{DisplayTags@{DisplayTags}!defaultNode@{defaultNode}}
+\index{defaultNode@{defaultNode}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{defaultNode}{defaultNode}}
+{\footnotesize\ttfamily \label{class_display_tags_a3bc0ab9de74647be9b31ef493ad239e4} 
+int Display\+Tags\+::default\+Node = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a7609cb9058029e8e2749e4f6ea6611c9}\index{DisplayTags@{DisplayTags}!DeleteBranchPanel@{DeleteBranchPanel}}
+\index{DeleteBranchPanel@{DeleteBranchPanel}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{DeleteBranchPanel}{DeleteBranchPanel}}
+{\footnotesize\ttfamily \label{class_display_tags_a7609cb9058029e8e2749e4f6ea6611c9} 
+Game\+Object Display\+Tags\+::\+Delete\+Branch\+Panel\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_ae2d333d60a947e1f3e433faf1ded9249}\index{DisplayTags@{DisplayTags}!DeleteNodePanel@{DeleteNodePanel}}
+\index{DeleteNodePanel@{DeleteNodePanel}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{DeleteNodePanel}{DeleteNodePanel}}
+{\footnotesize\ttfamily \label{class_display_tags_ae2d333d60a947e1f3e433faf1ded9249} 
+Game\+Object Display\+Tags\+::\+Delete\+Node\+Panel\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_acd8a051112bb6cf95f9d4c18f97f1b10}\index{DisplayTags@{DisplayTags}!draggedObject@{draggedObject}}
+\index{draggedObject@{draggedObject}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{draggedObject}{draggedObject}}
+{\footnotesize\ttfamily \label{class_display_tags_acd8a051112bb6cf95f9d4c18f97f1b10} 
+Game\+Object Display\+Tags\+::dragged\+Object\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a6dabf0ed193f49b11695d27e1de7f4f2}\index{DisplayTags@{DisplayTags}!existingLines@{existingLines}}
+\index{existingLines@{existingLines}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{existingLines}{existingLines}}
+{\footnotesize\ttfamily \label{class_display_tags_a6dabf0ed193f49b11695d27e1de7f4f2} 
+Dictionary$<$(Game\+Object parent, Game\+Object child), Line\+Renderer$>$ Display\+Tags\+::existing\+Lines = new Dictionary$<$(Game\+Object, Game\+Object), Line\+Renderer$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a200e63650c957a2092192b13a5faeef8}\index{DisplayTags@{DisplayTags}!hit@{hit}}
+\index{hit@{hit}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{hit}{hit}}
+{\footnotesize\ttfamily \label{class_display_tags_a200e63650c957a2092192b13a5faeef8} 
+Raycast\+Hit Display\+Tags\+::hit\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a6d7a752464c072c86718f87a35baaa14}\index{DisplayTags@{DisplayTags}!isDragging@{isDragging}}
+\index{isDragging@{isDragging}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{isDragging}{isDragging}}
+{\footnotesize\ttfamily \label{class_display_tags_a6d7a752464c072c86718f87a35baaa14} 
+bool Display\+Tags\+::is\+Dragging = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_abc9467ecbac48c70ab587b4c77942fb0}\index{DisplayTags@{DisplayTags}!mainCamera@{mainCamera}}
+\index{mainCamera@{mainCamera}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{mainCamera}{mainCamera}}
+{\footnotesize\ttfamily \label{class_display_tags_abc9467ecbac48c70ab587b4c77942fb0} 
+Camera Display\+Tags\+::main\+Camera\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_ad168cb46b41df2c63384ee106f8fc00b}\index{DisplayTags@{DisplayTags}!nbMaxNodeByDepth@{nbMaxNodeByDepth}}
+\index{nbMaxNodeByDepth@{nbMaxNodeByDepth}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{nbMaxNodeByDepth}{nbMaxNodeByDepth}}
+{\footnotesize\ttfamily \label{class_display_tags_ad168cb46b41df2c63384ee106f8fc00b} 
+Dictionary$<$int, int$>$ Display\+Tags\+::nb\+Max\+Node\+By\+Depth\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a789c2c021cbaa97d6783605891e97080}\index{DisplayTags@{DisplayTags}!nbNodeByDepth@{nbNodeByDepth}}
+\index{nbNodeByDepth@{nbNodeByDepth}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{nbNodeByDepth}{nbNodeByDepth}}
+{\footnotesize\ttfamily \label{class_display_tags_a789c2c021cbaa97d6783605891e97080} 
+Dictionary$<$int, int$>$ Display\+Tags\+::nb\+Node\+By\+Depth = new Dictionary$<$int, int$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a0eaa568e9ec322a01dad8e9fe3882740}\index{DisplayTags@{DisplayTags}!nodeOptionPanel@{nodeOptionPanel}}
+\index{nodeOptionPanel@{nodeOptionPanel}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{nodeOptionPanel}{nodeOptionPanel}}
+{\footnotesize\ttfamily \label{class_display_tags_a0eaa568e9ec322a01dad8e9fe3882740} 
+Game\+Object Display\+Tags\+::node\+Option\+Panel\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a6903131b69a6ab525f40151f47ab6a37}\index{DisplayTags@{DisplayTags}!nodeToInfoDictionary@{nodeToInfoDictionary}}
+\index{nodeToInfoDictionary@{nodeToInfoDictionary}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{nodeToInfoDictionary}{nodeToInfoDictionary}}
+{\footnotesize\ttfamily \label{class_display_tags_a6903131b69a6ab525f40151f47ab6a37} 
+Dictionary$<$Game\+Object, \mbox{\hyperlink{class_node_info}{Node\+Info}}$>$ Display\+Tags\+::node\+To\+Info\+Dictionary = new Dictionary$<$Game\+Object, \mbox{\hyperlink{class_node_info}{Node\+Info}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_af39675c676a41d00ed6294d7cf82c8f0}\index{DisplayTags@{DisplayTags}!nodeWidth@{nodeWidth}}
+\index{nodeWidth@{nodeWidth}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{nodeWidth}{nodeWidth}}
+{\footnotesize\ttfamily \label{class_display_tags_af39675c676a41d00ed6294d7cf82c8f0} 
+float Display\+Tags\+::node\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a26cdf7afce25ddec33314dbe299d545a}\index{DisplayTags@{DisplayTags}!offset@{offset}}
+\index{offset@{offset}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily \label{class_display_tags_a26cdf7afce25ddec33314dbe299d545a} 
+Vector3 Display\+Tags\+::offset\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a2bac4b3139c197f1e40ee1a8ae22e16a}\index{DisplayTags@{DisplayTags}!originalChildScales@{originalChildScales}}
+\index{originalChildScales@{originalChildScales}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{originalChildScales}{originalChildScales}}
+{\footnotesize\ttfamily \label{class_display_tags_a2bac4b3139c197f1e40ee1a8ae22e16a} 
+Dictionary$<$Transform, Vector3$>$ Display\+Tags\+::original\+Child\+Scales = new Dictionary$<$Transform, Vector3$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a40ee137ad9d00b4d4829c6c8c71f652b}\index{DisplayTags@{DisplayTags}!parentChildDictionary@{parentChildDictionary}}
+\index{parentChildDictionary@{parentChildDictionary}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{parentChildDictionary}{parentChildDictionary}}
+{\footnotesize\ttfamily \label{class_display_tags_a40ee137ad9d00b4d4829c6c8c71f652b} 
+Dictionary$<$Game\+Object, List$<$Game\+Object$>$ $>$ Display\+Tags\+::parent\+Child\+Dictionary = new Dictionary$<$Game\+Object, List$<$Game\+Object$>$$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_ac6fe90cd9cc115e1bda0573c77c8c282}\index{DisplayTags@{DisplayTags}!scaleAdaptator@{scaleAdaptator}}
+\index{scaleAdaptator@{scaleAdaptator}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{scaleAdaptator}{scaleAdaptator}}
+{\footnotesize\ttfamily \label{class_display_tags_ac6fe90cd9cc115e1bda0573c77c8c282} 
+float Display\+Tags\+::scale\+Adaptator\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a209c446fc8af1c38776e46826ae07dc9}\index{DisplayTags@{DisplayTags}!scaleCorrector@{scaleCorrector}}
+\index{scaleCorrector@{scaleCorrector}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{scaleCorrector}{scaleCorrector}}
+{\footnotesize\ttfamily \label{class_display_tags_a209c446fc8af1c38776e46826ae07dc9} 
+Vector3 Display\+Tags\+::scale\+Corrector}
+
+\Hypertarget{class_display_tags_a3563b77e8539ae5cd0eee75a62ee4f85}\index{DisplayTags@{DisplayTags}!screenHeight@{screenHeight}}
+\index{screenHeight@{screenHeight}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{screenHeight}{screenHeight}}
+{\footnotesize\ttfamily \label{class_display_tags_a3563b77e8539ae5cd0eee75a62ee4f85} 
+float Display\+Tags\+::screen\+Height\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a126d18bbff71b509fcca2da9330ab872}\index{DisplayTags@{DisplayTags}!screenInitialWidth@{screenInitialWidth}}
+\index{screenInitialWidth@{screenInitialWidth}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{screenInitialWidth}{screenInitialWidth}}
+{\footnotesize\ttfamily \label{class_display_tags_a126d18bbff71b509fcca2da9330ab872} 
+float Display\+Tags\+::screen\+Initial\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a60f54dba85f800bb5a58cf221a2d0687}\index{DisplayTags@{DisplayTags}!screenObject@{screenObject}}
+\index{screenObject@{screenObject}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{screenObject}{screenObject}}
+{\footnotesize\ttfamily \label{class_display_tags_a60f54dba85f800bb5a58cf221a2d0687} 
+Game\+Object Display\+Tags\+::screen\+Object\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a41687dd8636368699e1242e7a12b319b}\index{DisplayTags@{DisplayTags}!screenRect@{screenRect}}
+\index{screenRect@{screenRect}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{screenRect}{screenRect}}
+{\footnotesize\ttfamily \label{class_display_tags_a41687dd8636368699e1242e7a12b319b} 
+Rect\+Transform Display\+Tags\+::screen\+Rect\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a2bf56477804a86f325d7e07a4ab591b7}\index{DisplayTags@{DisplayTags}!screenScale@{screenScale}}
+\index{screenScale@{screenScale}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{screenScale}{screenScale}}
+{\footnotesize\ttfamily \label{class_display_tags_a2bf56477804a86f325d7e07a4ab591b7} 
+Vector3 Display\+Tags\+::screen\+Scale\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a22bf41c07b35a14bb77de7c64d258512}\index{DisplayTags@{DisplayTags}!screenWidth@{screenWidth}}
+\index{screenWidth@{screenWidth}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{screenWidth}{screenWidth}}
+{\footnotesize\ttfamily \label{class_display_tags_a22bf41c07b35a14bb77de7c64d258512} 
+float Display\+Tags\+::screen\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a5abb8e1bb5ea06b42d491dc457770310}\index{DisplayTags@{DisplayTags}!ScreenWidthInNodes@{ScreenWidthInNodes}}
+\index{ScreenWidthInNodes@{ScreenWidthInNodes}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{ScreenWidthInNodes}{ScreenWidthInNodes}}
+{\footnotesize\ttfamily \label{class_display_tags_a5abb8e1bb5ea06b42d491dc457770310} 
+int Display\+Tags\+::\+Screen\+Width\+In\+Nodes\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a3ab7fc5187b02370825630ea0d79966c}\index{DisplayTags@{DisplayTags}!semaphore@{semaphore}}
+\index{semaphore@{semaphore}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{semaphore}{semaphore}}
+{\footnotesize\ttfamily \label{class_display_tags_a3ab7fc5187b02370825630ea0d79966c} 
+bool Display\+Tags\+::semaphore = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_afd6956bcfc8809eb84caecb9e99b0030}\index{DisplayTags@{DisplayTags}!signPrefab@{signPrefab}}
+\index{signPrefab@{signPrefab}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{signPrefab}{signPrefab}}
+{\footnotesize\ttfamily \label{class_display_tags_afd6956bcfc8809eb84caecb9e99b0030} 
+Game\+Object Display\+Tags\+::sign\+Prefab}
+
+\Hypertarget{class_display_tags_a804360004e59ca31db5ee15e187f672d}\index{DisplayTags@{DisplayTags}!tmpText@{tmpText}}
+\index{tmpText@{tmpText}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{tmpText}{tmpText}}
+{\footnotesize\ttfamily \label{class_display_tags_a804360004e59ca31db5ee15e187f672d} 
+Text\+Mesh\+Pro\+UGUI Display\+Tags\+::tmp\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_acacfc2e63a224d7dd48e3214b95c6f03}\index{DisplayTags@{DisplayTags}!touchedNode@{touchedNode}}
+\index{touchedNode@{touchedNode}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{touchedNode}{touchedNode}}
+{\footnotesize\ttfamily \label{class_display_tags_acacfc2e63a224d7dd48e3214b95c6f03} 
+Game\+Object Display\+Tags\+::touched\+Node = null\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_aa44569df931438a448c0d810e4373100}\index{DisplayTags@{DisplayTags}!updateVisuel@{updateVisuel}}
+\index{updateVisuel@{updateVisuel}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{updateVisuel}{updateVisuel}}
+{\footnotesize\ttfamily \label{class_display_tags_aa44569df931438a448c0d810e4373100} 
+bool Display\+Tags\+::update\+Visuel = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_display_tags_a8e8ed34248e4a6485d259f07d26f877e}\index{DisplayTags@{DisplayTags}!xSpacing@{xSpacing}}
+\index{xSpacing@{xSpacing}!DisplayTags@{DisplayTags}}
+\doxysubsubsection{\texorpdfstring{xSpacing}{xSpacing}}
+{\footnotesize\ttfamily \label{class_display_tags_a8e8ed34248e4a6485d259f07d26f877e} 
+float Display\+Tags\+::x\+Spacing\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\mbox{\hyperlink{_display_tags_8cs}{Display\+Tags.\+cs}}\end{DoxyCompactItemize}

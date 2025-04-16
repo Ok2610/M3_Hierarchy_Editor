@@ -1,0 +1,8 @@
+<map id="DisplayTags::DisplayNodeChildren" name="DisplayTags::DisplayNodeChildren">
+<area shape="rect" id="Node000001" title="Displays the child nodes of a given parent node by creating new &quot;sign&quot; game objects for each child...." alt="" coords="5,29,182,72"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="52,29,50,19,57,10,72,5,94,3,117,5,131,11,129,16,116,10,93,8,73,10,60,15,55,21,57,28"/>
+<area shape="rect" id="Node000002" href="$class_display_tags.html#af9c20907028b0542be286d75c517cfe3" title="Creates a visual line between a parent and child transform, representing their relationship...." alt="" coords="231,12,395,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,38,215,34,215,39,182,43"/>
+<area shape="rect" id="Node000003" href="$class_display_tags.html#a3756fa00014cd94c339c28ce07b96eca" title="Creates a sign object for a given node at the specified position. The sign object represents the node..." alt="" coords="230,63,396,89"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,58,214,62,214,67,181,63"/>
+</map>

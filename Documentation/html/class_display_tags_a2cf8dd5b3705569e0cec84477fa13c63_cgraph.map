@@ -1,0 +1,25 @@
+<map id="DisplayTags::CheckCollisionWithOtherNodes" name="DisplayTags::CheckCollisionWithOtherNodes">
+<area shape="rect" id="Node000001" title="Checks for collisions between the dragged node and other nodes in the scene. This function uses the P..." alt="" coords="5,155,195,197"/>
+<area shape="rect" id="Node000002" href="$class_display_tags.html#ae0170ecd1a82ea7b1f0e46c1c036a27d" title="Sends a request to the API to fetch data related to a specific node and its hierarchy...." alt="" coords="243,137,453,164"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,164,227,160,227,166,195,169"/>
+<area shape="rect" id="Node000009" href="$class_display_tags.html#af685a0371493074db3a7a92bfd0e81ef" title="Sends a PUT request to update the parent of a moved node in the API. This function extracts the ID of..." alt="" coords="246,188,450,215"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="195,183,231,187,231,192,195,188"/>
+<area shape="rect" id="Node000003" href="$class_display_tags.html#a70d3da52ef0ba3cfd6420447f40e0c2c" title="Explores the nodes hierarchy by creating and displaying nodes recursively based on the JSON data rece..." alt="" coords="501,137,684,164"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="454,148,485,148,485,153,454,153"/>
+<area shape="rect" id="Node000004" href="$class_display_tags.html#a4fc9c44e686df0f8c4f671c535ebd298" title="Calculates and updates the number of nodes present at each depth level in a node hierarchy...." alt="" coords="766,29,946,72"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="623,134,731,88,768,75,770,80,733,93,625,139"/>
+<area shape="rect" id="Node000005" href="$class_display_tags.html#a3756fa00014cd94c339c28ce07b96eca" title="Creates a sign object for a given node at the specified position. The sign object represents the node..." alt="" coords="1028,152,1194,179"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="685,136,824,127,902,127,980,132,1049,145,1048,150,979,137,902,132,824,132,685,142"/>
+<area shape="rect" id="Node000006" href="$class_display_tags.html#a1309504cf0a45d4a667a09b5e7f95ffc" title="Displays the child nodes of a given parent node by creating new &quot;sign&quot; game objects for each child...." alt="" coords="768,171,944,213"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="683,162,753,173,752,178,682,167"/>
+<area shape="rect" id="Node000008" href="$class_display_tags.html#a96ca4c4c93dc33f395e527d4eb05a2b7" title="Updates the connection lines between parent and child nodes. This method redraws the relationship lin..." alt="" coords="732,237,980,264"/>
+<area shape="poly" id="edge10_Node000003_Node000008" title=" " alt="" coords="660,162,686,174,701,186,710,199,719,212,734,223,746,229,744,234,731,228,715,215,706,203,697,190,683,178,658,167"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="808,29,806,19,814,10,831,5,856,3,883,5,899,11,898,16,882,10,856,8,832,10,817,15,811,21,813,28"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="945,180,1012,173,1012,178,945,185"/>
+<area shape="poly" id="edge9_Node000006_Node000006" title=" " alt="" coords="808,171,806,161,814,152,831,146,856,144,883,146,899,153,898,158,882,152,856,149,832,151,817,156,811,162,813,170"/>
+<area shape="rect" id="Node000007" href="$class_display_tags.html#af9c20907028b0542be286d75c517cfe3" title="Creates a visual line between a parent and child transform, representing their relationship...." alt="" coords="1029,207,1193,233"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="945,199,1013,207,1013,212,945,204"/>
+<area shape="poly" id="edge11_Node000008_Node000007" title=" " alt="" coords="972,234,1013,229,1014,234,973,239"/>
+<area shape="rect" id="Node000010" href="$class_display_tags.html#ad1aab244954dc364f5d3df4eb29366a6" title="Extracts the node ID from a string using a regular expression. The function searches for a specific p..." alt="" coords="516,188,670,215"/>
+<area shape="poly" id="edge13_Node000009_Node000010" title=" " alt="" coords="450,199,500,199,500,204,450,204"/>
+</map>

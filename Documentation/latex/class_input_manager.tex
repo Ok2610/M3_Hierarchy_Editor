@@ -1,0 +1,111 @@
+\doxysection{Input\+Manager Class Reference}
+\hypertarget{class_input_manager}{}\label{class_input_manager}\index{InputManager@{InputManager}}
+
+
+Class responsible for managing user input for VR devices, such as buttons on the left and right hands. Implements the Singleton pattern to ensure only one instance exists.  
+
+
+
+
+Inheritance diagram for Input\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_input_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Input\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{class_input_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_input_manager_a7f377f4c9ac72c87a9ba277e2bcbdaac}{Left\+Button\+APressed}}
+\begin{DoxyCompactList}\small\item\em Gets a value indicating whether the primary button (A) on the left hand is pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_input_manager}{Input\+Manager}} \mbox{\hyperlink{class_input_manager_abfdbed57b299bf4ec16c21dd09d123f8}{Instance}}
+\begin{DoxyCompactList}\small\item\em Singleton instance of the \doxylink{class_input_manager}{Input\+Manager} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Input\+Device \mbox{\hyperlink{class_input_manager_aefe0f2dc66a96d67df1eb364d1cd838d}{left\+Hand\+Device}}
+\begin{DoxyCompactList}\small\item\em Reference to the left hand input device. \end{DoxyCompactList}\item 
+Input\+Device \mbox{\hyperlink{class_input_manager_a3d7575bb78b0e4502ba1f0ed0b22bb1c}{right\+Hand\+Device}}
+\begin{DoxyCompactList}\small\item\em Reference to the right hand input device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_manager_af89cc96c27da854e63c6f09727e0882a}{\+\_\+left\+Button\+APressed}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class responsible for managing user input for VR devices, such as buttons on the left and right hands. Implements the Singleton pattern to ensure only one instance exists. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_input_manager_af89cc96c27da854e63c6f09727e0882a}\index{InputManager@{InputManager}!\_leftButtonAPressed@{\_leftButtonAPressed}}
+\index{\_leftButtonAPressed@{\_leftButtonAPressed}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{\_leftButtonAPressed}{\_leftButtonAPressed}}
+{\footnotesize\ttfamily \label{class_input_manager_af89cc96c27da854e63c6f09727e0882a} 
+bool Input\+Manager\+::\+\_\+left\+Button\+APressed\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_input_manager_abfdbed57b299bf4ec16c21dd09d123f8}\index{InputManager@{InputManager}!Instance@{Instance}}
+\index{Instance@{Instance}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \label{class_input_manager_abfdbed57b299bf4ec16c21dd09d123f8} 
+\mbox{\hyperlink{class_input_manager}{Input\+Manager}} Input\+Manager\+::\+Instance\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Singleton instance of the \doxylink{class_input_manager}{Input\+Manager} class. 
+
+\Hypertarget{class_input_manager_a7f377f4c9ac72c87a9ba277e2bcbdaac}\index{InputManager@{InputManager}!LeftButtonAPressed@{LeftButtonAPressed}}
+\index{LeftButtonAPressed@{LeftButtonAPressed}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{LeftButtonAPressed}{LeftButtonAPressed}}
+{\footnotesize\ttfamily \label{class_input_manager_a7f377f4c9ac72c87a9ba277e2bcbdaac} 
+bool Input\+Manager\+::\+Left\+Button\+APressed}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ get\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_input_manager_af89cc96c27da854e63c6f09727e0882a}{\_leftButtonAPressed}};\ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ set\ \{\ \mbox{\hyperlink{class_input_manager_af89cc96c27da854e63c6f09727e0882a}{\_leftButtonAPressed}}\ =\ value;\ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_rightButtonAPressed}
+
+\end{DoxyCode}
+
+
+Gets a value indicating whether the primary button (A) on the left hand is pressed. 
+
+{\ttfamily true} if the primary button (A) on the left hand is pressed; otherwise, {\ttfamily false}. \Hypertarget{class_input_manager_aefe0f2dc66a96d67df1eb364d1cd838d}\index{InputManager@{InputManager}!leftHandDevice@{leftHandDevice}}
+\index{leftHandDevice@{leftHandDevice}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{leftHandDevice}{leftHandDevice}}
+{\footnotesize\ttfamily \label{class_input_manager_aefe0f2dc66a96d67df1eb364d1cd838d} 
+Input\+Device Input\+Manager\+::left\+Hand\+Device\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to the left hand input device. 
+
+\Hypertarget{class_input_manager_a3d7575bb78b0e4502ba1f0ed0b22bb1c}\index{InputManager@{InputManager}!rightHandDevice@{rightHandDevice}}
+\index{rightHandDevice@{rightHandDevice}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{rightHandDevice}{rightHandDevice}}
+{\footnotesize\ttfamily \label{class_input_manager_a3d7575bb78b0e4502ba1f0ed0b22bb1c} 
+Input\+Device Input\+Manager\+::right\+Hand\+Device\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to the right hand input device. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\mbox{\hyperlink{_input_manager_8cs}{Input\+Manager.\+cs}}\end{DoxyCompactItemize}

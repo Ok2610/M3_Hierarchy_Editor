@@ -1,0 +1,27 @@
+<map id="DisplayTags::CreateSign" name="DisplayTags::CreateSign">
+<area shape="rect" id="Node000001" title="Creates a sign object for a given node at the specified position. The sign object represents the node..." alt="" coords="1442,164,1609,191"/>
+<area shape="rect" id="Node000002" href="$class_display_tags.html#a1309504cf0a45d4a667a09b5e7f95ffc" title="Displays the child nodes of a given parent node by creating new &quot;sign&quot; game objects for each child...." alt="" coords="1218,127,1394,169"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1427,167,1395,162,1395,157,1428,162"/>
+<area shape="rect" id="Node000003" href="$class_display_tags.html#a70d3da52ef0ba3cfd6420447f40e0c2c" title="Explores the nodes hierarchy by creating and displaying nodes recursively based on the JSON data rece..." alt="" coords="987,164,1170,191"/>
+<area shape="poly" id="edge15_Node000001_Node000003" title=" " alt="" coords="1427,183,1394,184,1218,184,1170,183,1170,178,1218,179,1394,179,1426,178"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="1342,113,1328,108,1306,105,1286,107,1273,112,1268,118,1270,126,1264,127,1263,117,1270,108,1284,102,1306,100,1330,102,1344,109"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="1203,164,1171,168,1170,163,1202,159"/>
+<area shape="rect" id="Node000004" href="$class_display_tags.html#a86129df2700ab982292f9029616efbe8" title="Sends a request to the API to fetch a hierarchy of nodes based on the specified hierarchy ID...." alt="" coords="445,101,680,128"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="971,167,678,131,679,126,972,162"/>
+<area shape="rect" id="Node000008" href="$class_display_tags.html#ae0170ecd1a82ea7b1f0e46c1c036a27d" title="Sends a request to the API to fetch data related to a specific node and its hierarchy...." alt="" coords="728,189,939,216"/>
+<area shape="poly" id="edge10_Node000003_Node000008" title=" " alt="" coords="971,191,940,194,939,189,971,186"/>
+<area shape="rect" id="Node000005" href="$class_display_tags.html#a629c9bb1162b7783f782a170da64b564" title="Adds a new node to the database by sending an HTTP POST request to the API. The function serializes t..." alt="" coords="204,5,390,48"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="504,98,363,51,365,46,506,93"/>
+<area shape="rect" id="Node000006" href="$class_display_tags.html#af28cd2806e067aac0160202087ec4906" title="This method is called once per frame to update the game logic. It handles screen resizing via arrow k..." alt="" coords="5,131,149,157"/>
+<area shape="poly" id="edge9_Node000004_Node000006" title=" " alt="" coords="430,107,316,105,197,113,156,122,118,133,116,128,155,116,196,108,316,99,430,101"/>
+<area shape="rect" id="Node000007" href="$class_display_tags.html#acd5bf7c591dc5abebbb435807b3c893f" title="Deletes a node from the database by sending an HTTP DELETE request to the API. The function locates t..." alt="" coords="197,123,397,165"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="430,132,398,136,397,130,429,127"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="224,57,198,69,143,102,98,132,95,128,140,97,195,64,221,52"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="181,147,149,147,149,141,181,141"/>
+<area shape="poly" id="edge14_Node000008_Node000006" title=" " alt="" coords="713,209,603,209,473,206,334,197,196,180,118,161,120,155,197,175,335,191,473,200,603,204,713,204"/>
+<area shape="rect" id="Node000009" href="$class_display_tags.html#a2cf8dd5b3705569e0cec84477fa13c63" title="Checks for collisions between the dragged node and other nodes in the scene. This function uses the P..." alt="" coords="468,240,657,283"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="754,222,658,243,657,238,753,217"/>
+<area shape="rect" id="Node000010" href="$class_display_tags.html#a8a531271715a281b9128daa0c6b96bf6" title="Stops the dragging operation of an object. This function is called when the user releases the object ..." alt="" coords="207,244,387,271"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="453,262,388,261,388,256,453,257"/>
+<area shape="poly" id="edge13_Node000010_Node000006" title=" " alt="" coords="236,241,195,224,140,191,95,160,98,156,143,187,198,219,238,236"/>
+</map>

@@ -1,0 +1,46 @@
+\chapter{Installation guide}
+\hypertarget{md_installation__guide}{}\label{md_installation__guide}\index{Installation guide@{Installation guide}}
+\label{md_installation__guide_autotoc_md2}%
+\Hypertarget{md_installation__guide_autotoc_md2}%
+
+
+File updated on 10/04/2025.\hypertarget{md_installation__guide_autotoc_md3}{}\doxysection{\texorpdfstring{Prerequisite}{Prerequisite}}\label{md_installation__guide_autotoc_md3}
+\hypertarget{md_installation__guide_autotoc_md4}{}\doxysubsection{\texorpdfstring{Database}{Database}}\label{md_installation__guide_autotoc_md4}
+
+\begin{DoxyItemize}
+\item Download \href{https://www.postgresql.org/download/}{\texttt{ Postgre\+SQL (latest version)}} ~\newline
+
+\item Create the user\+: ~\newline
+ {\ttfamily sudo -\/u \texorpdfstring{$<$}{<}nom d\textquotesingle{}utilisateur\texorpdfstring{$>$}{>} psql} ~\newline
+
+\item Set up the database (execution order matters)\+: ~\newline
+ {\ttfamily psql -\/U \texorpdfstring{$<$}{<}nom d\textquotesingle{}utilisateur\texorpdfstring{$>$}{>}} ~\newline
+ {\ttfamily CREATE DATABASE mmm;} (case-\/sensitive) ~\newline
+ {\ttfamily psql -\/U \texorpdfstring{$<$}{<}nom\+\_\+utilisateur\texorpdfstring{$>$}{>} -\/d mmm -\/f \texorpdfstring{$<$}{<}chemin\+\_\+vers\+\_\+le\+\_\+fichier\+\_\+"{}views.\+sql"{}\texorpdfstring{$>$}{>}} ~\newline
+ {\ttfamily psql -\/U \texorpdfstring{$<$}{<}nom\+\_\+utilisateur\texorpdfstring{$>$}{>} -\/d mmm -\/f \texorpdfstring{$<$}{<}chemin\+\_\+vers\+\_\+le\+\_\+fichier\+\_\+"{}tagset-\/views.\+sql"{}\texorpdfstring{$>$}{>}} ~\newline
+ {\ttfamily psql -\/U \texorpdfstring{$<$}{<}nom\+\_\+utilisateur\texorpdfstring{$>$}{>} -\/d mmm -\/f \texorpdfstring{$<$}{<}chemin\+\_\+vers\+\_\+le\+\_\+fichier\+\_\+"{}\+SMALL-\/postgres.\+sql"{}\texorpdfstring{$>$}{>}} ~\newline
+
+\end{DoxyItemize}\hypertarget{md_installation__guide_autotoc_md5}{}\doxysubsection{\texorpdfstring{API}{API}}\label{md_installation__guide_autotoc_md5}
+
+\begin{DoxyItemize}
+\item Download \href{https://dotnet.microsoft.com/fr-fr/download}{\texttt{ dotnet (latest version)}}. ~\newline
+
+\item Download \href{https://github.com/Ok2610/PhotoCube-Server}{\texttt{ Photo\+Cube-\/\+Server}}. ~\newline
+
+\item Change the "{}\+Default\+Connection"{} line and provide the database user and password in the appsettings.\+json file located at the root of the Photo\+Cube-\/\+Server folder. ~\newline
+ Example\+: `Server = localhost; Port = 5432; Database = mmm; User Id = $<$utilisateur$>$; Password = '$<$password$>$\textquotesingle{};\`{} ~\newline
+
+\end{DoxyItemize}\hypertarget{md_installation__guide_autotoc_md6}{}\doxysubsection{\texorpdfstring{Front end}{Front end}}\label{md_installation__guide_autotoc_md6}
+
+\begin{DoxyItemize}
+\item Download \href{https://unity.com/download}{\texttt{ Unity\+HUB (dernière version)}}. ~\newline
+
+\item Download \href{https://unity.com/releases/editor/archive}{\texttt{ Unity (version 2020.\+3.\+27f1)}}. ~\newline
+
+\end{DoxyItemize}\hypertarget{md_installation__guide_autotoc_md7}{}\doxysection{\texorpdfstring{Launching the project}{Launching the project}}\label{md_installation__guide_autotoc_md7}
+
+\begin{DoxyEnumerate}
+\item Run the API. Execute the following command in a terminal\+: {\ttfamily dotnet run -\/project C\+:\textbackslash{}...path\+To\+The\+Project...\textbackslash{}Object\+Cube\+Server.\+csproj} ~\newline
+
+\item Launch Unity. 
+\end{DoxyEnumerate}

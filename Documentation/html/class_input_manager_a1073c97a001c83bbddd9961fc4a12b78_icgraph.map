@@ -1,0 +1,7 @@
+<map id="InputManager::InitializeDevices" name="InputManager::InitializeDevices">
+<area shape="rect" id="Node000001" title="Initializes the input devices for the left and right hands." alt="" coords="204,23,360,65"/>
+<area shape="rect" id="Node000002" href="$class_input_manager.html#a3591d6df0d390c7d0845ae0d6583df3f" title="Called at the start. Initializes the input devices." alt="" coords="12,5,149,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,35,149,30,149,25,189,30"/>
+<area shape="rect" id="Node000003" href="$class_input_manager.html#aa5480931dba2720e7d80dd00a53adae0" title="Called every frame. Checks the button states and re&#45;initializes devices if necessary." alt="" coords="5,56,156,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,58,156,63,156,57,188,53"/>
+</map>

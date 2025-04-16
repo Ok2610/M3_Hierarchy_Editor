@@ -1,0 +1,126 @@
+\doxysection{Node\+Info Class Reference}
+\hypertarget{class_node_info}{}\label{class_node_info}\index{NodeInfo@{NodeInfo}}
+
+
+Represents metadata information about a node, including its name, hierarchy, tag associations, and optional parent node reference.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_node_info_af62dd8cb3db8950531dc5b1c77ad26dc}{Node\+Info}} (int \mbox{\hyperlink{class_node_info_a8d098d28f8eea752943220e1d3661e93}{id}}, string \mbox{\hyperlink{class_node_info_a2990073c7989b1657f7a509c3049b23e}{name}}, int \mbox{\hyperlink{class_node_info_a407f3bdcb1f5ccdb6e1410664560690f}{hierarchy\+Id}}, int \mbox{\hyperlink{class_node_info_aedf7ca581bac8d9cfb8297e2cc2c67fe}{tag\+Type\+Id}}, int \mbox{\hyperlink{class_node_info_ab1192aefbfbeb63465928da78926c911}{tag\+Set\+Id}}, int? \mbox{\hyperlink{class_node_info_a8fc338649ee44af9d0f41960b471a42c}{parentnode\+Id}})
+\begin{DoxyCompactList}\small\item\em Constructs a new instance of \doxylink{class_node_info}{Node\+Info} with the provided values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_node_info_a8d098d28f8eea752943220e1d3661e93}{id}}
+\begin{DoxyCompactList}\small\item\em The unique identifier of the node. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_node_info_a2990073c7989b1657f7a509c3049b23e}{name}}
+\begin{DoxyCompactList}\small\item\em The display name of the node. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_node_info_a407f3bdcb1f5ccdb6e1410664560690f}{hierarchy\+Id}}
+\begin{DoxyCompactList}\small\item\em The identifier of the hierarchy this node belongs to. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_node_info_aedf7ca581bac8d9cfb8297e2cc2c67fe}{tag\+Type\+Id}}
+\begin{DoxyCompactList}\small\item\em The identifier of the tag type associated with the node. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_node_info_ab1192aefbfbeb63465928da78926c911}{tag\+Set\+Id}}
+\begin{DoxyCompactList}\small\item\em The identifier of the tag set associated with the node. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_node_info_a8fc338649ee44af9d0f41960b471a42c}{parentnode\+Id}}
+\begin{DoxyCompactList}\small\item\em The optional ID of the parent node, if it exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents metadata information about a node, including its name, hierarchy, tag associations, and optional parent node reference. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_node_info_af62dd8cb3db8950531dc5b1c77ad26dc}\index{NodeInfo@{NodeInfo}!NodeInfo@{NodeInfo}}
+\index{NodeInfo@{NodeInfo}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{NodeInfo()}{NodeInfo()}}
+{\footnotesize\ttfamily \label{class_node_info_af62dd8cb3db8950531dc5b1c77ad26dc} 
+Node\+Info\+::\+Node\+Info (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{string}]{name}{, }\item[{int}]{hierarchy\+Id}{, }\item[{int}]{tag\+Type\+Id}{, }\item[{int}]{tag\+Set\+Id}{, }\item[{int?}]{parentnode\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a new instance of \doxylink{class_node_info}{Node\+Info} with the provided values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique ID of the node.\\
+\hline
+{\em name} & The display name of the node.\\
+\hline
+{\em hierarchy\+Id} & The hierarchy ID to which the node belongs.\\
+\hline
+{\em tag\+Type\+Id} & The tag type ID associated with this node.\\
+\hline
+{\em tag\+Set\+Id} & The tag set ID associated with this node.\\
+\hline
+{\em parentnode\+Id} & The optional parent node ID, or null if there is no parent.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_node_info_a407f3bdcb1f5ccdb6e1410664560690f}\index{NodeInfo@{NodeInfo}!hierarchyId@{hierarchyId}}
+\index{hierarchyId@{hierarchyId}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{hierarchyId}{hierarchyId}}
+{\footnotesize\ttfamily \label{class_node_info_a407f3bdcb1f5ccdb6e1410664560690f} 
+int Node\+Info\+::hierarchy\+Id}
+
+
+
+The identifier of the hierarchy this node belongs to. 
+
+\Hypertarget{class_node_info_a8d098d28f8eea752943220e1d3661e93}\index{NodeInfo@{NodeInfo}!id@{id}}
+\index{id@{id}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{class_node_info_a8d098d28f8eea752943220e1d3661e93} 
+int Node\+Info\+::id}
+
+
+
+The unique identifier of the node. 
+
+\Hypertarget{class_node_info_a2990073c7989b1657f7a509c3049b23e}\index{NodeInfo@{NodeInfo}!name@{name}}
+\index{name@{name}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{class_node_info_a2990073c7989b1657f7a509c3049b23e} 
+string Node\+Info\+::name}
+
+
+
+The display name of the node. 
+
+\Hypertarget{class_node_info_a8fc338649ee44af9d0f41960b471a42c}\index{NodeInfo@{NodeInfo}!parentnodeId@{parentnodeId}}
+\index{parentnodeId@{parentnodeId}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{parentnodeId}{parentnodeId}}
+{\footnotesize\ttfamily \label{class_node_info_a8fc338649ee44af9d0f41960b471a42c} 
+int Node\+Info\+::parentnode\+Id}
+
+
+
+The optional ID of the parent node, if it exists. 
+
+\Hypertarget{class_node_info_ab1192aefbfbeb63465928da78926c911}\index{NodeInfo@{NodeInfo}!tagSetId@{tagSetId}}
+\index{tagSetId@{tagSetId}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{tagSetId}{tagSetId}}
+{\footnotesize\ttfamily \label{class_node_info_ab1192aefbfbeb63465928da78926c911} 
+int Node\+Info\+::tag\+Set\+Id}
+
+
+
+The identifier of the tag set associated with the node. 
+
+\Hypertarget{class_node_info_aedf7ca581bac8d9cfb8297e2cc2c67fe}\index{NodeInfo@{NodeInfo}!tagTypeId@{tagTypeId}}
+\index{tagTypeId@{tagTypeId}!NodeInfo@{NodeInfo}}
+\doxysubsubsection{\texorpdfstring{tagTypeId}{tagTypeId}}
+{\footnotesize\ttfamily \label{class_node_info_aedf7ca581bac8d9cfb8297e2cc2c67fe} 
+int Node\+Info\+::tag\+Type\+Id}
+
+
+
+The identifier of the tag type associated with the node. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\mbox{\hyperlink{_node_info_8cs}{Node\+Info.\+cs}}\end{DoxyCompactItemize}

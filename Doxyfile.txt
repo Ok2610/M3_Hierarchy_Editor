@@ -1,0 +1,41 @@
+# Doxygen configuration for Unity / C# project
+
+# Project details
+PROJECT_NAME           = "Hierarchy editor for ViRMA"
+PROJECT_BRIEF          = "Create a hierarchy editor to able ViRMA's administrators to modify the hierarchies's tags "
+OUTPUT_DIRECTORY       = Documentation
+INPUT                  = Assets main.md installation_guide.md Potential_Enhancements.md
+FILE_PATTERNS          = *.cs
+RECURSIVE              = YES
+
+# Extract info from code
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+
+# Language
+OPTIMIZE_OUTPUT_FOR_CSHARP = YES
+EXTENSION_MAPPING      = cs=C++
+
+# Markdown support
+USE_MDFILE_AS_MAINPAGE = main.md
+MARKDOWN_SUPPORT       = YES
+
+# Output formats
+GENERATE_HTML          = YES
+GENERATE_LATEX         = YES
+
+# Diagrams
+HAVE_DOT               = YES
+DOT_PATH               = "C:\Program Files\Graphviz\bin\dot.exe"
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+CLASS_DIAGRAMS         = YES
+
+# Warnings (optionnel mais utile)
+WARN_IF_UNDOCUMENTED   = YES
+WARN_NO_PARAMDOC       = YES
+
+# Layout customization (ajoute ton fichier de mise en page personnalisé)
+LAYOUT_FILE            = index.xml

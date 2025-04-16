@@ -1,0 +1,90 @@
+\doxysection{Nodes Class Reference}
+\hypertarget{class_nodes}{}\label{class_nodes}\index{Nodes@{Nodes}}
+
+
+Represents a node in a hierarchical structure, where each node can have children nodes. The node contains an ID, a tag, and a hierarchy ID to describe its relationship within the structure.  
+
+
+
+
+Collaboration diagram for Nodes\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=125pt]{class_nodes__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_nodes_ab3c3d33a0679a6a882c2d4787968ef2d}{id}}
+\begin{DoxyCompactList}\small\item\em The unique identifier of the node. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_nodes_a13ec227e5ffb2f49cf2988a6af322124}{tag\+Id}}
+\begin{DoxyCompactList}\small\item\em The identifier for the associated tag of the node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tag}{Tag}} \mbox{\hyperlink{class_nodes_a11aac073c9949d0584280dab8a671950}{tag}}
+\begin{DoxyCompactList}\small\item\em The tag associated with this node. This could be a category or a label used for further processing. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_nodes_a9f36ad131f2722b82cef31e275c7be7e}{hierarchy\+Id}}
+\begin{DoxyCompactList}\small\item\em The ID representing the node\textquotesingle{}s position within a hierarchy. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_nodes}{Nodes}} $>$ \mbox{\hyperlink{class_nodes_a013f089009eb20602572d49d93eb12c9}{children}} = new List$<$\mbox{\hyperlink{class_nodes}{Nodes}}$>$()
+\begin{DoxyCompactList}\small\item\em The list of child nodes that belong to this node, representing a hierarchical tree structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a node in a hierarchical structure, where each node can have children nodes. The node contains an ID, a tag, and a hierarchy ID to describe its relationship within the structure. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_nodes_a013f089009eb20602572d49d93eb12c9}\index{Nodes@{Nodes}!children@{children}}
+\index{children@{children}!Nodes@{Nodes}}
+\doxysubsubsection{\texorpdfstring{children}{children}}
+{\footnotesize\ttfamily \label{class_nodes_a013f089009eb20602572d49d93eb12c9} 
+List$<$\mbox{\hyperlink{class_nodes}{Nodes}}$>$ Nodes\+::children = new List$<$\mbox{\hyperlink{class_nodes}{Nodes}}$>$()}
+
+
+
+The list of child nodes that belong to this node, representing a hierarchical tree structure. 
+
+\Hypertarget{class_nodes_a9f36ad131f2722b82cef31e275c7be7e}\index{Nodes@{Nodes}!hierarchyId@{hierarchyId}}
+\index{hierarchyId@{hierarchyId}!Nodes@{Nodes}}
+\doxysubsubsection{\texorpdfstring{hierarchyId}{hierarchyId}}
+{\footnotesize\ttfamily \label{class_nodes_a9f36ad131f2722b82cef31e275c7be7e} 
+int Nodes\+::hierarchy\+Id}
+
+
+
+The ID representing the node\textquotesingle{}s position within a hierarchy. 
+
+\Hypertarget{class_nodes_ab3c3d33a0679a6a882c2d4787968ef2d}\index{Nodes@{Nodes}!id@{id}}
+\index{id@{id}!Nodes@{Nodes}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{class_nodes_ab3c3d33a0679a6a882c2d4787968ef2d} 
+int Nodes\+::id}
+
+
+
+The unique identifier of the node. 
+
+\Hypertarget{class_nodes_a11aac073c9949d0584280dab8a671950}\index{Nodes@{Nodes}!tag@{tag}}
+\index{tag@{tag}!Nodes@{Nodes}}
+\doxysubsubsection{\texorpdfstring{tag}{tag}}
+{\footnotesize\ttfamily \label{class_nodes_a11aac073c9949d0584280dab8a671950} 
+\mbox{\hyperlink{class_tag}{Tag}} Nodes\+::tag}
+
+
+
+The tag associated with this node. This could be a category or a label used for further processing. 
+
+\Hypertarget{class_nodes_a13ec227e5ffb2f49cf2988a6af322124}\index{Nodes@{Nodes}!tagId@{tagId}}
+\index{tagId@{tagId}!Nodes@{Nodes}}
+\doxysubsubsection{\texorpdfstring{tagId}{tagId}}
+{\footnotesize\ttfamily \label{class_nodes_a13ec227e5ffb2f49cf2988a6af322124} 
+int Nodes\+::tag\+Id}
+
+
+
+The identifier for the associated tag of the node. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\mbox{\hyperlink{_nodes_8cs}{Nodes.\+cs}}\end{DoxyCompactItemize}

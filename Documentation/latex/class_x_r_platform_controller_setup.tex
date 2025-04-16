@@ -1,0 +1,91 @@
+\doxysection{XRPlatform\+Controller\+Setup Class Reference}
+\hypertarget{class_x_r_platform_controller_setup}{}\label{class_x_r_platform_controller_setup}\index{XRPlatformControllerSetup@{XRPlatformControllerSetup}}
+
+
+Manages the setup of the VR controller models based on the active XR platform. This script enables or disables specific controller Game\+Objects depending on the XR loader being used.  
+
+
+
+
+Inheritance diagram for XRPlatform\+Controller\+Setup\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{class_x_r_platform_controller_setup__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for XRPlatform\+Controller\+Setup\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{class_x_r_platform_controller_setup__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_x_r_platform_controller_setup_afc87480319f60d10d4e60daeba62eb2b}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the controller setup based on the active XR platform. If the Oculus XR loader is active, this function disables the default controllers and enables the Oculus-\/specific controllers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{class_x_r_platform_controller_setup_a9082a1927d720d7ab1c75306e7dcfd27}{m\+\_\+\+Left\+Controller}}
+\item 
+Game\+Object \mbox{\hyperlink{class_x_r_platform_controller_setup_adbfd6a7b3764b1c919b3decb94dc67ba}{m\+\_\+\+Right\+Controller}}
+\item 
+Game\+Object \mbox{\hyperlink{class_x_r_platform_controller_setup_ae004f792858f0fed07ed5527f1fb891a}{m\+\_\+\+Left\+Controller\+Oculus\+Package}}
+\item 
+Game\+Object \mbox{\hyperlink{class_x_r_platform_controller_setup_af71d2bb4a5a8382f923e4505cbd97163}{m\+\_\+\+Right\+Controller\+Oculus\+Package}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the setup of the VR controller models based on the active XR platform. This script enables or disables specific controller Game\+Objects depending on the XR loader being used. 
+
+This class is designed to work with Unity\textquotesingle{}s XR system and specifically handles the Oculus VR platform. When the Oculus loader is active, it disables the default controller models and enables the Oculus-\/specific ones. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_x_r_platform_controller_setup_afc87480319f60d10d4e60daeba62eb2b}\index{XRPlatformControllerSetup@{XRPlatformControllerSetup}!Start@{Start}}
+\index{Start@{Start}!XRPlatformControllerSetup@{XRPlatformControllerSetup}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_x_r_platform_controller_setup_afc87480319f60d10d4e60daeba62eb2b} 
+void XRPlatform\+Controller\+Setup\+::\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Initializes the controller setup based on the active XR platform. If the Oculus XR loader is active, this function disables the default controllers and enables the Oculus-\/specific controllers. 
+
+The function checks the active XR loaders, and if the "{}\+Oculus Loader"{} is found, it disables the default left and right controllers and activates the corresponding Oculus controllers. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_x_r_platform_controller_setup_a9082a1927d720d7ab1c75306e7dcfd27}\index{XRPlatformControllerSetup@{XRPlatformControllerSetup}!m\_LeftController@{m\_LeftController}}
+\index{m\_LeftController@{m\_LeftController}!XRPlatformControllerSetup@{XRPlatformControllerSetup}}
+\doxysubsubsection{\texorpdfstring{m\_LeftController}{m\_LeftController}}
+{\footnotesize\ttfamily \label{class_x_r_platform_controller_setup_a9082a1927d720d7ab1c75306e7dcfd27} 
+Game\+Object XRPlatform\+Controller\+Setup\+::m\+\_\+\+Left\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_x_r_platform_controller_setup_ae004f792858f0fed07ed5527f1fb891a}\index{XRPlatformControllerSetup@{XRPlatformControllerSetup}!m\_LeftControllerOculusPackage@{m\_LeftControllerOculusPackage}}
+\index{m\_LeftControllerOculusPackage@{m\_LeftControllerOculusPackage}!XRPlatformControllerSetup@{XRPlatformControllerSetup}}
+\doxysubsubsection{\texorpdfstring{m\_LeftControllerOculusPackage}{m\_LeftControllerOculusPackage}}
+{\footnotesize\ttfamily \label{class_x_r_platform_controller_setup_ae004f792858f0fed07ed5527f1fb891a} 
+Game\+Object XRPlatform\+Controller\+Setup\+::m\+\_\+\+Left\+Controller\+Oculus\+Package\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_x_r_platform_controller_setup_adbfd6a7b3764b1c919b3decb94dc67ba}\index{XRPlatformControllerSetup@{XRPlatformControllerSetup}!m\_RightController@{m\_RightController}}
+\index{m\_RightController@{m\_RightController}!XRPlatformControllerSetup@{XRPlatformControllerSetup}}
+\doxysubsubsection{\texorpdfstring{m\_RightController}{m\_RightController}}
+{\footnotesize\ttfamily \label{class_x_r_platform_controller_setup_adbfd6a7b3764b1c919b3decb94dc67ba} 
+Game\+Object XRPlatform\+Controller\+Setup\+::m\+\_\+\+Right\+Controller\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_x_r_platform_controller_setup_af71d2bb4a5a8382f923e4505cbd97163}\index{XRPlatformControllerSetup@{XRPlatformControllerSetup}!m\_RightControllerOculusPackage@{m\_RightControllerOculusPackage}}
+\index{m\_RightControllerOculusPackage@{m\_RightControllerOculusPackage}!XRPlatformControllerSetup@{XRPlatformControllerSetup}}
+\doxysubsubsection{\texorpdfstring{m\_RightControllerOculusPackage}{m\_RightControllerOculusPackage}}
+{\footnotesize\ttfamily \label{class_x_r_platform_controller_setup_af71d2bb4a5a8382f923e4505cbd97163} 
+Game\+Object XRPlatform\+Controller\+Setup\+::m\+\_\+\+Right\+Controller\+Oculus\+Package\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\mbox{\hyperlink{_x_r_platform_controller_setup_8cs}{XRPlatform\+Controller\+Setup.\+cs}}\end{DoxyCompactItemize}

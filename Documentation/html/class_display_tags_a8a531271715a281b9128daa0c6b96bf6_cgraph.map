@@ -1,0 +1,33 @@
+<map id="DisplayTags::StopDragging" name="DisplayTags::StopDragging">
+<area shape="rect" id="Node000001" title="Stops the dragging operation of an object. This function is called when the user releases the object ..." alt="" coords="5,243,186,269"/>
+<area shape="rect" id="Node000002" href="$class_display_tags.html#a2cf8dd5b3705569e0cec84477fa13c63" title="Checks for collisions between the dragged node and other nodes in the scene. This function uses the P..." alt="" coords="250,176,439,219"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,240,235,220,237,225,156,245"/>
+<area shape="rect" id="Node000012" href="$class_display_tags.html#aab78b94be69b23edda2e673ea9adba80" title="Sets the transparency (alpha value) of the given object and all of its children that have a Renderer ..." alt="" coords="244,243,444,269"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="186,253,228,253,228,259,186,259"/>
+<area shape="rect" id="Node000014" href="$class_display_tags.html#a1e681f4b9f513d07ebee9998a678a065" title="Updates the positions of the line between the parent and child transforms. This method is called when..." alt="" coords="234,293,455,320"/>
+<area shape="poly" id="edge17_Node000001_Node000014" title=" " alt="" coords="165,267,261,287,260,292,164,273"/>
+<area shape="rect" id="Node000003" href="$class_display_tags.html#ae0170ecd1a82ea7b1f0e46c1c036a27d" title="Sends a request to the API to fetch data related to a specific node and its hierarchy...." alt="" coords="504,137,715,164"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="439,178,514,165,515,170,440,183"/>
+<area shape="rect" id="Node000010" href="$class_display_tags.html#af685a0371493074db3a7a92bfd0e81ef" title="Sends a PUT request to update the parent of a moved node in the API. This function extracts the ID of..." alt="" coords="508,188,711,215"/>
+<area shape="poly" id="edge13_Node000002_Node000010" title=" " alt="" coords="439,196,493,197,493,202,439,201"/>
+<area shape="rect" id="Node000004" href="$class_display_tags.html#a70d3da52ef0ba3cfd6420447f40e0c2c" title="Explores the nodes hierarchy by creating and displaying nodes recursively based on the JSON data rece..." alt="" coords="764,137,948,164"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="715,148,749,148,749,153,715,153"/>
+<area shape="rect" id="Node000005" href="$class_display_tags.html#a4fc9c44e686df0f8c4f671c535ebd298" title="Calculates and updates the number of nodes present at each depth level in a node hierarchy...." alt="" coords="1029,29,1210,72"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="886,134,995,88,1032,75,1034,80,997,93,888,139"/>
+<area shape="rect" id="Node000006" href="$class_display_tags.html#a3756fa00014cd94c339c28ce07b96eca" title="Creates a sign object for a given node at the specified position. The sign object represents the node..." alt="" coords="1291,152,1457,179"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="948,136,1087,127,1166,127,1243,132,1312,145,1311,150,1243,137,1165,132,1087,132,948,142"/>
+<area shape="rect" id="Node000007" href="$class_display_tags.html#a1309504cf0a45d4a667a09b5e7f95ffc" title="Displays the child nodes of a given parent node by creating new &quot;sign&quot; game objects for each child...." alt="" coords="1031,171,1208,213"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="946,162,1016,173,1015,178,945,167"/>
+<area shape="rect" id="Node000009" href="$class_display_tags.html#a96ca4c4c93dc33f395e527d4eb05a2b7" title="Updates the connection lines between parent and child nodes. This method redraws the relationship lin..." alt="" coords="996,237,1243,264"/>
+<area shape="poly" id="edge11_Node000004_Node000009" title=" " alt="" coords="924,162,949,174,964,186,974,199,982,212,997,223,1009,229,1007,234,994,228,979,215,969,203,961,190,946,178,922,167"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="1071,29,1069,19,1077,10,1094,5,1119,3,1146,5,1163,11,1161,16,1145,10,1119,8,1095,10,1080,15,1074,21,1076,28"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="1208,180,1275,173,1276,178,1208,185"/>
+<area shape="poly" id="edge10_Node000007_Node000007" title=" " alt="" coords="1071,171,1069,161,1077,152,1094,146,1119,144,1146,146,1163,153,1161,158,1145,152,1119,149,1095,151,1080,156,1074,162,1076,170"/>
+<area shape="rect" id="Node000008" href="$class_display_tags.html#af9c20907028b0542be286d75c517cfe3" title="Creates a visual line between a parent and child transform, representing their relationship...." alt="" coords="1292,207,1456,233"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="1208,199,1276,207,1276,212,1208,204"/>
+<area shape="poly" id="edge12_Node000009_Node000008" title=" " alt="" coords="1235,234,1276,229,1277,234,1236,239"/>
+<area shape="rect" id="Node000011" href="$class_display_tags.html#ad1aab244954dc364f5d3df4eb29366a6" title="Extracts the node ID from a string using a regular expression. The function searches for a specific p..." alt="" coords="779,188,933,215"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="712,199,763,199,763,204,712,204"/>
+<area shape="rect" id="Node000013" href="$class_display_tags.html#a3cc6347a3a21f05e630e3c16378f6b2e" title="Applies transparency (alpha value) to a Renderer component. This method modifies the color of the mat..." alt="" coords="503,243,716,269"/>
+<area shape="poly" id="edge16_Node000012_Node000013" title=" " alt="" coords="445,253,487,253,487,259,445,259"/>
+</map>

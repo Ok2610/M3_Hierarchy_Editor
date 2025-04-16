@@ -1,0 +1,5 @@
+<map id="DisplayTags::AddNodeFromDatabase" name="DisplayTags::AddNodeFromDatabase">
+<area shape="rect" id="Node000001" title="Adds a new node to the database by sending an HTTP POST request to the API. The function serializes t..." alt="" coords="197,5,382,48"/>
+<area shape="rect" id="Node000002" href="$class_display_tags.html#af28cd2806e067aac0160202087ec4906" title="This method is called once per frame to update the game logic. It handles screen resizing via arrow k..." alt="" coords="5,13,149,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,29,149,29,149,24,181,24"/>
+</map>

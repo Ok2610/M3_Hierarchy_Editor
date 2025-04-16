@@ -1,0 +1,99 @@
+\doxysection{Button\+Handler Class Reference}
+\hypertarget{class_button_handler}{}\label{class_button_handler}\index{ButtonHandler@{ButtonHandler}}
+
+
+Inheritance diagram for Button\+Handler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_button_handler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Button\+Handler\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_button_handler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_button_handler_afc9d52864692f9237c04cf39da645fd1}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Called when the script is first initialized. This method assigns the Toggle\+Node\+Option method to the button\textquotesingle{}s on\+Click event. It also ensures that the node option plane is initially disabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_button_handler_ad465a3d956d60dbde963000558fca53e}{Toggle\+Node\+Option}} ()
+\begin{DoxyCompactList}\small\item\em Toggles the visibility of the node options plane. This method is called when the button is clicked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Button \mbox{\hyperlink{class_button_handler_af66089fd05d7a97af8ae58e940f6d3a8}{button\+Node\+Option}}
+\begin{DoxyCompactList}\small\item\em A reference to the button that triggers the node options toggle. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_button_handler_a9b435fcef4d07045d7b08cb75729a658}{node\+Option}}
+\begin{DoxyCompactList}\small\item\em A reference to the Game\+Object representing the node options plane. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_button_handler_afc9d52864692f9237c04cf39da645fd1}\index{ButtonHandler@{ButtonHandler}!Start@{Start}}
+\index{Start@{Start}!ButtonHandler@{ButtonHandler}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_button_handler_afc9d52864692f9237c04cf39da645fd1} 
+void Button\+Handler\+::\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Called when the script is first initialized. This method assigns the Toggle\+Node\+Option method to the button\textquotesingle{}s on\+Click event. It also ensures that the node option plane is initially disabled. 
+
+The {\ttfamily button\+Node\+Option} should be assigned via the Unity Inspector to link the button. The {\ttfamily node\+Option} should be assigned to the Game\+Object that you want to show or hide when the button is clicked. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_button_handler_afc9d52864692f9237c04cf39da645fd1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_button_handler_ad465a3d956d60dbde963000558fca53e}\index{ButtonHandler@{ButtonHandler}!ToggleNodeOption@{ToggleNodeOption}}
+\index{ToggleNodeOption@{ToggleNodeOption}!ButtonHandler@{ButtonHandler}}
+\doxysubsubsection{\texorpdfstring{ToggleNodeOption()}{ToggleNodeOption()}}
+{\footnotesize\ttfamily \label{class_button_handler_ad465a3d956d60dbde963000558fca53e} 
+void Button\+Handler\+::\+Toggle\+Node\+Option (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Toggles the visibility of the node options plane. This method is called when the button is clicked. 
+
+This method activates or deactivates the {\ttfamily node\+Option} Game\+Object based on its current state. If it is active, it will be deactivated, and vice versa. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_button_handler_ad465a3d956d60dbde963000558fca53e_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_button_handler_af66089fd05d7a97af8ae58e940f6d3a8}\index{ButtonHandler@{ButtonHandler}!buttonNodeOption@{buttonNodeOption}}
+\index{buttonNodeOption@{buttonNodeOption}!ButtonHandler@{ButtonHandler}}
+\doxysubsubsection{\texorpdfstring{buttonNodeOption}{buttonNodeOption}}
+{\footnotesize\ttfamily \label{class_button_handler_af66089fd05d7a97af8ae58e940f6d3a8} 
+Button Button\+Handler\+::button\+Node\+Option}
+
+
+
+A reference to the button that triggers the node options toggle. 
+
+\Hypertarget{class_button_handler_a9b435fcef4d07045d7b08cb75729a658}\index{ButtonHandler@{ButtonHandler}!nodeOption@{nodeOption}}
+\index{nodeOption@{nodeOption}!ButtonHandler@{ButtonHandler}}
+\doxysubsubsection{\texorpdfstring{nodeOption}{nodeOption}}
+{\footnotesize\ttfamily \label{class_button_handler_a9b435fcef4d07045d7b08cb75729a658} 
+Game\+Object Button\+Handler\+::node\+Option}
+
+
+
+A reference to the Game\+Object representing the node options plane. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Assets/\mbox{\hyperlink{_button_handler_8cs}{Button\+Handler.\+cs}}\end{DoxyCompactItemize}
